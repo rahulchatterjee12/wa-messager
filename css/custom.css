@@ -1,0 +1,14 @@
+.upload_excel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  margin-right: auto;
+  background-color: #1bac5c;
+  color: white;
+  height: 100%;
+  cursor: pointer;
+}
+.upload_excel:hover {
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.3);
+}

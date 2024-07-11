@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  </style>
+  <head>
+    <meta name="viewport" content="initial-scale=1" />
+    <meta charset="UTF-8" />
+    <script src="js/xlsx.full.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/toast.js"></script>
+    <script src="js/shadow.js"></script>
+    <script src="js/choices.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap.tokenfield.min.js"></script>
+    <script src="js/flowbite.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/flowbite.min.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/shadow.css" />
+    <link rel="stylesheet" href="css/toast.css" />
+    <link rel="stylesheet" href="css/choices.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.tokenfield.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body
+    style="width: 550px"
+    data-chardin-sequenced="true"
+    data-chardin-auto="false"
+    data-chardin-delay="800"
+  >
+    <!--reload screen-->
+    <div id="reload" class="p-2" style="display: none">
+      <div class="flex justify-between">
+        <div class="flex">
+          <img
+            src="./assets/logo.png"
+            style="height: 30px; width: 30px"
+            class="my-2 ml-2"
+          />
+
+          <div style="color: #000; font-size: 20px" class="ml-2 mt-2 mb-2">
+            <strong>WAMessager</strong>
+          </div>
+        </div>
+      </div>
+      <div
+        style="height: 300px; background-color: white; flex-direction: column"
+        class="flex justify-center"
+      >
+        <span style="align-self: center" class="mb-4" id="reloadHeadingText"
+          >Kindly Click button below to Reload the WhatsApp</span
+        >
+        <button
+          id="reloadTab"
+          style="align-self: center"
+          class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold h-10 py-2 px-4 rounded items-center justify-center"
+        >
+          Reload
+        </button>
+        <span id="supportBrowsers" style="align-self: center" class="mt-20"
+          >Supported browsers:<i class="fa fa-chrome"></i> Google Chrome,
+          <i class="fa fa-edge"></i> Microsoft Edge</span
+        >
+      </div>
+    </div>
+
+    <!--loading screen-->
+    <div id="loadingScreen" class="p-2" style="display: ''">
+      <div class="flex justify-between">
+        <div class="flex">
+          <img
+            src="./assets/logo.png"
+            style="height: 30px; width: 30px"
+            class="my-2 ml-2"
+          />
+
+          <div style="color: #000; font-size: 20px" class="ml-2 mt-2 mb-2">
+            <strong>WAMessager</strong>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          height: 300px;
+          background-color: white;
+          flex-direction: column;
+          align-items: center;
+        "
+        class="flex justify-center"
+      >
+        <div
+          role="status"
+          style="align-items: center; display: flex; flex-direction: column"
+          id="loadingScreenLoader"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+            viewBox="0 0 100 101"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+              fill="currentColor"
+            />
+            <path
+              d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+              fill="currentFill"
+            />
+          </svg>
+          <span style="margin-top: 20px">Loading... Please Wait!</span>
+        </div>
+
+        <div
+          style="align-items: center; flex-direction: column; display: none"
+          id="loadingScreenErrorMessage"
+        >
+          <svg
+            height="32"
+            style="overflow: visible; enable-background: new 0 0 32 32"
+            viewBox="0 0 32 32"
+            width="32"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g>
+              <g id="Error_1_">
+                <g id="Error">
+                  <circle
+                    cx="16"
+                    cy="16"
+                    id="BG"
+                    r="16"
+                    style="fill: #d72828"
+                  />
+                  <path
+                    d="M14.5,25h3v-3h-3V25z M14.5,6v13h3V6H14.5z"
+                    id="Exclamatory_x5F_Sign"
+                    style="fill: #e6e6e6"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+          <span style="margin-top: 20px"
+            >Oops Error Occured, Your Internet Connection might be slow or some
+            URL is blocked, Please contact support on
+            <a
+              href="https://www.wamessager.com/contact-us/"
+              target="_blank"
+              style="color: blue"
+              ><i>WAM Official Support</i></a
+            ></span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- onboarding screen -->
+
+    <div id="onboarding" class="p-2" style="display: none">
+      <div class="flex justify-between">
+        <div class="flex">
+          <img
+            src="./assets/logo.png"
+            style="height: 30px; width: 30px"
+            class="my-2 ml-2"
+          />
+
+          <div style="color: #000; font-size: 20px" class="ml-2 mt-2 mb-2">
+            <strong>WAMessager</strong>
+          </div>
+        </div>
+
+        <div class="mx-3 my-2">
+          <a
+            href="https://www.wamessager.com/faqs/"
+            style="color: #000; font-size: 15px"
+            target="_blank"
+            >FAQ's</a
+          >
+        </div>
+      </div>
+
+      <div style="color: #000; font-size: 20px" class="ml-2 mt-2 mb-2">
+        <strong id="firstMessageText"
+          >Let's start by sending your first message</strong
+        >
+      </div>
+
+      <div>
+        <input
+          id="onboardingNumber"
+          style="width: 100%; height: 35px"
+          type="text"
+          class="rounded-lg border-2 pl-2"
+          disabled
+        />
+      </div>
+
+      <div
+        id="message-line"
+        style="
+          display: flex;
+          margin-top: 15px;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          align-items: center;
+        "
+      >
+        <h4 style="margin: 0; font-weight: bold" id="firstMessageReadyText">
+          You're ready to send your first message
+        </h4>
+      </div>
+
+      <textarea
+        name="comment"
+        id="onboardingMessage"
+        placeholder="Type message here..."
+        style="font-size: 18px"
+        value="Hi, I'm just trying WAMessager and sending message to just check if everything is working fine"
+        disabled
+        required
+      >
+Hi, *I'm excited to use WAM and boost my business*, and unlike other extensions WAM has best in class features, quick customer support and most affordable pricing.
+With Wam I can:
+Send Personalized Messages
+Send Clickable Links
+Send up to 7 attachments with caption
+Connect with my contacts easily
+Get 24 X 7 quick support here
+</textarea
+      >
+
+      <div class="justify-center align-center">
+        <button
+          id="onboardingSend"
+          data-intro="Click here to send your first message"
+          data-position="right"
+          data-sequence="1"
+          class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-2 rounded h-100 mr-5 inline-flex items-center justify-center"
+        >
+          <span id="onboardingSendText">Send</span>
+          <img
+            src="./assets/icons/send.png"
+            style="height: 15px; width: 15px"
+            class="ml-1"
+          />
+        </button>
+      </div>
+    </div>
+
+    <!-- unsynced -->
+    <div id="unsynced" style="display: none">
+      <div class="">
+        <div class="flex justify-between">
+          <div class="flex">
+            <img
+              src="./assets/logo.png"
+              style="height: 30px; width: 30px"
+              class="my-2 ml-2"
+            />
+
+            <div style="color: #000; font-size: 20px" class="ml-2 mt-2 mb-2">
+              <strong>WAMessager</strong>
+            </div>
+          </div>
+
+          <div class="mx-3 my-2">
+            <a
+              href="https://www.wamessager.com/faqs/"
+              style="color: #000; font-size: 15px"
+              target="_blank"
+              >FAQ's</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <strong
+          ><span is="syncMsgText">Enable Sync To Use WAMessager</span></strong
+        >
+        or
+        <!-- Changes -->
+        <a style="color: blue; font-size: 12px" href="/" target="_blank"
+          ><u>check this tutorial</u></a
+        >
+      </div>
+      <div class="text-center text-gray-1 text-xs" id="syncMessageNote">
+        (We require this to serve you better)
+      </div>
+      <img class="rounded mt-5 px-10 pb-5" src="./assets/enablesync.png" />
+    </div>
+
+    <!-- synced -->
+    <div id="synced" style="display: none">
+      <div class="flex justify-between">
+        <div class="flex" style="align-items: center">
+          <img
+            src="./assets/logo.png"
+            style="height: 30px; width: 30px"
+            class="my-2 ml-2"
+          />
+
+          <div style="color: #000; font-size: 20px" class="ml-2 mt-2 mb-2">
+            <strong>WAMessager</strong>
+          </div>
+        </div>
+
+        <div id="nonPremiumUser" class="my-auto">
+          Number: <span id="myNumber2"></span><br />Plan: <span>Free</span>
+        </div>
+
+        <div class="flex" id="premiumUser" style="display: none">
+          <img
+            src="./assets/crown.png"
+            style="height: 30px; width: 30px"
+            class="my-2 ml-2"
+          />
+
+          <div style="color: #000; font-size: 20px" class="ml-2 mt-2 mb-2">
+            <strong>Premium</strong>
+          </div>
+        </div>
+
+        <div
+          style="color: #1bac5c; font-size: 15px"
+          class="m-2 messageCount"
+          id="messageCountDiv"
+        >
+          <span id="extMessageCount">Messages Sent:</span>
+          <span id="messageCount"></span><br />
+          <div
+            style="color: #1bac5c; font-size: 13px"
+            class="messageCount"
+            id="dailyLimitDiv"
+          >
+            <span id="dailyMsgReset">Reset in: </span>
+            <span id="dailyMsgResetTime"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab">
+        <button class="tablinks" id="defaultOpen">Home</button>
+        <button class="tablinks" id="Collaborators">Team</button>
+        <button class="tablinks" id="Enhancement">Enhancement</button>
+        <button class="tablinks" id="Premium">Buy Premium</button>
+      </div>
+
+      <div id="SendMessages" class="tabcontent">
+        <div class=" ">
+          <div id="second">
+            <!-- MANUAL ENTRY -->
+            <div class="flex justify-between mb-2">
+              <div class="flex" style="align-items: center">
+                <label
+                  id="execlSheetBtn"
+                  class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-2 rounded h-100 mr-1 inline-flex items-center"
+                >
+                  <img
+                    src="./assets/icons/sheet.png"
+                    style="height: 20px; width: 20px"
+                    class="mr-1"
+                  />
+                  <span id="execlSheetBtnText"> Upload Excel</span>
+                  <img
+                    id="uploadExcelPremiumBadge"
+                    src="./assets/crown.png"
+                    style="height: 20px; width: 20px; display: none"
+                    class="ml-2"
+                  />
+                  <input
+                    type="file"
+                    id="input"
+                    class="Column firstline btn"
+                    accept=".xls,.xlsx,.ods,.csv"
+                    style="display: none"
+                  />
+                </label>
+                <a href="https://youtu.be/iQolG1VHVJM" target="_blank"
+                  ><i
+                    class="fa fa-info-circle mr-5"
+                    style="font-size: large"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </div>
+
+              <div
+                class="flex flex-col"
+                id="options_div1"
+                style="display: none"
+              >
+                <div class="mb-1 font-bold">
+                  <span id="sheet_select_text">Select Sheet</span>
+                </div>
+                <select
+                  id="options2"
+                  class="bg-gray-200 rounded px-1 py-0"
+                  style="width: 100px; font-size: 12px"
+                ></select>
+              </div>
+
+              <div
+                class="bg-gray-200 hover:bg-gray-300 cursor-pointer p-2 rounded"
+                id="deleteExecl"
+                style="width: 40px; height: 40px; display: none"
+              >
+                <img src="./assets/delete.svg" alt="delete" />
+              </div>
+
+              <button
+                id="downloadExcelTemplate"
+                class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-4 rounded h-100 mr-5 inline-flex items-center"
+              >
+                <img
+                  src="./assets/icons/download.png"
+                  style="height: 20px; width: 20px"
+                />
+
+                <span id="downloadExcelTemplateText">Excel Template</span>
+              </button>
+
+              <div>
+                <!-- filter numbers -->
+                <div class="Column stopmessage flex flex-col" name="Stop">
+                  <div class="flex" style="align-items: center">
+                    <button
+                      id="filter_numbers"
+                      style="display: none"
+                      class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-2 rounded h-100 mr-5 inline-flex items-center"
+                    >
+                      <img
+                        src="./assets/icons/filter.png"
+                        style="height: 20px; width: 20px"
+                        class="mr-1"
+                      />
+
+                      <span id="filter_numbersText">Numbers</span>
+                    </button>
+                  </div>
+
+                  <!-- filter progress bar -->
+                  <div
+                    class="progress-container"
+                    id="progress-container-filter"
+                  >
+                    <div class="progress-bar" id="progress-bar-filter">
+                      <div
+                        class="progress-indicator"
+                        id="progress-indicator-filter"
+                      ></div>
+                    </div>
+
+                    <strong id="sorted-number-filter" class="text-green-600"
+                      >2/3</strong
+                    >
+                    <span id="sorted-number-filterText">contacts filtered</span>
+                  </div>
+                  <!-- filter progress bar -->
+                </div>
+                <!-- filter numbers -->
+
+                <!-- download group -->
+                <button
+                  id="download_members"
+                  class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-2 rounded h-100 inline-flex items-center"
+                  data-modal-toggle="defaultModal"
+                  data-modal-target="defaultModal"
+                >
+                  <img
+                    src="./assets/icons/download.png"
+                    style="height: 20px; width: 20px"
+                  />
+
+                  <span id="download_membersText">Download Group</span>
+                  <img
+                    id="DownloadGroupPremiumBadge"
+                    src="./assets/crown.png"
+                    style="height: 20px; width: 20px; display: none"
+                    class="ml-2"
+                  />
+                </button>
+
+                <!-- Main modal -->
+                <div
+                  id="defaultModal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                >
+                  <div class="relative w-full max-w-2xl max-h-full">
+                    <!-- Modal content -->
+                    <div
+                      class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <!-- Modal header -->
+                      <div
+                        class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
+                      >
+                        <h3
+                          class="text-xl font-semibold text-gray-900 dark:text-white"
+                        >
+                          <span id="DownloadGroupHeadingText"
+                            >Download Your Contacts</span
+                          ><a
+                            href="https://youtu.be/P6mcg7zn4FY"
+                            target="_blank"
+                            ><i
+                              class="fa fa-info-circle ml-1"
+                              aria-hidden="true"
+                            ></i
+                          ></a>
+                        </h3>
+                        <button
+                          type="button"
+                          style="border-color: black"
+                          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                          data-modal-hide="defaultModal"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                            ></path>
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                        </button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="p-6 space-y-6">
+                        <div
+                          id="export-from-group"
+                          style="
+                            margin-top: 15px;
+                            padding: 10px;
+                            border: 1px solid #929292;
+                            border-radius: 15px;
+                            -moz-border-radius: 15px;
+                          "
+                        >
+                          <div class="flex justify-between">
+                            <div class="flex flex-row">
+                              <span
+                                id="exportGroupText"
+                                style="
+                                  font-size: 18px;
+                                  line-height: 30px;
+                                  margin-right: 10px;
+                                "
+                              >
+                                Export Contacts from
+                              </span>
+                              <select
+                                id="choices-for-export"
+                                style="width: 100px; height: 40px"
+                              >
+                                <option value="Group">Group</option>
+                                <option value="Label">Label</option>
+                              </select>
+                            </div>
+                            <button
+                              id="export-group"
+                              type="button"
+                              class="bg-green-700 disabled:bg-slate-50 cursor-pointer text-white font-bold py-2 px-4 rounded h-100 mr-5 inline-flex items-center"
+                            >
+                              Export Now
+                            </button>
+                          </div>
+                          <div class="row flex justify-center my-2">
+                            <div style="width: 100%">
+                              <select
+                                id="choices-multiple-remove-button"
+                                style="width: 100%"
+                                multiple
+                              >
+                                <option value="HTML" disabled>
+                                  Loading...
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              role="switch"
+                              id="selectAllGroups"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="selectAllGroups"
+                              ><span id="selectAllGroupsText"
+                                >Select All Groups</span
+                              ></label
+                            >
+                            <br />
+                          </div>
+                        </div>
+                        <div
+                          id="export-from-list"
+                          style="
+                            margin-top: 15px;
+                            padding: 10px;
+                            border: 1px solid #929292;
+                            border-radius: 15px;
+                            -moz-border-radius: 15px;
+                          "
+                        >
+                          <div class="flex justify-between">
+                            <span
+                              style="font-size: 18px; line-height: 30px"
+                              id="export-from-listText"
+                              >Export Contacts from Chat Lists:</span
+                            ><button
+                              id="export-list"
+                              type="button"
+                              class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-4 rounded h-100 mr-5 inline-flex items-center"
+                            >
+                              Export Now
+                            </button>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="chatListOptions"
+                              id="allChats"
+                              value="allChats"
+                              checked
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineRadio1"
+                              id="allChatsText"
+                              >Export all contacts info from chatlist</label
+                            >
+                          </div>
+                          <!-- <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="chatListOptions"
+                              id="unsavedChats"
+                              value="unsavedChats"
+                            />
+                            <label
+                              class="form-check-label"
+                              for="inlineRadio2"
+                              id="unsavedChatsText"
+                              >Export Unsaved contacts info from chatlist</label
+                            >
+                          </div> -->
+                        </div>
+                      </div>
+                      <!-- Modal footer -->
+                      <div
+                        class="flex justify-center items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
+                      >
+                        <button
+                          id="downloadGroupCloseBtnText"
+                          data-modal-hide="defaultModal"
+                          type="button"
+                          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- download group -->
+              </div>
+            </div>
+            <div class="flex flex-row" style="margin-bottom: 10px">
+              <div class="flex flex-col" id="options_div" style="display: none">
+                <div class="mb-1 font-bold">
+                  <span id="options_divText">Numbers Column</span>
+                </div>
+                <select
+                  id="options"
+                  class="bg-gray-200 rounded px-1 py-0"
+                  style="max-width: 100px; font-size: 12px"
+                ></select>
+              </div>
+              <div
+                class="flex flex-col"
+                id="options_div2"
+                style="margin-left: 20px; display: none"
+              >
+                <div class="mb-1 font-bold">
+                  <span id="excel_from_text">From</span>
+                </div>
+                <input
+                  type="number"
+                  placeholder="1"
+                  id="enter-excel-from"
+                  class="p-1 underline border border-green-500"
+                  style="width: 50px; height: 25px"
+                  value="1"
+                  min="1"
+                />
+              </div>
+              <div
+                class="flex flex-col"
+                id="options_div3"
+                style="margin-left: 20px; display: none"
+              >
+                <div class="mb-1 font-bold">
+                  <span id="excel_to_text">To</span>
+                </div>
+                <input
+                  type="number"
+                  placeholder="10"
+                  id="enter-excel-to"
+                  class="p-1 underline border border-green-500"
+                  style="width: 50px; height: 25px"
+                  value="10"
+                  min="1"
+                />
+              </div>
+            </div>
+
+            <div
+              class="inline-flex"
+              style="width: 100%; flex-wrap: wrap; justify-content: center"
+            >
+              <input
+                id="number"
+                style="width: 90%; height: 30px"
+                type="text"
+                class="rounded-lg border-2 px-2"
+                placeholder="  Add Numbers with country code Eg 91933333333 seprated by commas + Enter"
+                name="numbers"
+              />
+              <button class="clear" id="clear">clear</button>
+              <span
+                class="flex mb-1 font-bold contact-found"
+                id="contacts-found"
+              ></span>
+            </div>
+
+            <!-- message settings -->
+            <div id="messageSettings">
+              <!-- MESSAGE SETTINGS -->
+              <div>
+                <div
+                  id="form-checks"
+                  style="margin-top: 5px; margin-bottom: 5px"
+                >
+                  <div
+                    id="message-line"
+                    style="
+                      display: flex;
+                      margin-top: 15px;
+                      justify-content: space-between;
+                      margin-bottom: 10px;
+                      align-items: center;
+                    "
+                  >
+                    <h4
+                      style="margin: 0; font-weight: bold"
+                      id="messageSettingsText"
+                    >
+                      Message Settings:
+                    </h4>
+
+                    <div>
+                      <a
+                        href="https://www.youtube.com/playlist?list=PLhZ7eYI23H2IhJmeCiQsVoo7Ij1KQAid0"
+                        target="_blank"
+                        >Facing issue? check our
+                        <u>
+                          <span
+                            style="
+                              padding-top: 10px;
+                              font-size: 14px;
+                              color: blue;
+                            "
+                            id="Tutorials"
+                            >Tutorial</span
+                          ></u
+                        ></a
+                      >
+                      or
+                      <u
+                        ><a href="#"
+                          ><span
+                            style="
+                              padding-top: 10px;
+                              padding-right: 20px;
+                              font-size: 14px;
+                              color: blue;
+                            "
+                            id="SupportTutorial"
+                            >Contact Support</span
+                          ></a
+                        ></u
+                      >
+                    </div>
+                  </div>
+
+                  <div class="flex justify-between">
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="send_attachments"
+                        name="attachments"
+                        value="attachments"
+                      />
+                      <label class="ml-1" id="send_attachmentsText"
+                        >Send Attachments</label
+                      >
+                      <a href="https://youtu.be/GRzLPWa5DIU" target="_blank"
+                        ><i
+                          class="fa fa-info-circle ml-1"
+                          aria-hidden="true"
+                        ></i
+                      ></a>
+                      <br />
+                    </div>
+
+                    <button
+                      id="add_attachment_button"
+                      data-modal-target="small-modal"
+                      type="button"
+                      style="margin-right: 20px"
+                      class="hidden pr-2 py-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span id="attachmentAddButton">Add Attachment</span>
+                    </button>
+                  </div>
+
+                  <div
+                    id="small-modal"
+                    data-modal-backdrop="static"
+                    tabindex="-1"
+                    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+                  >
+                    <div class="relative w-full max-w-md max-h-full">
+                      <!-- Modal content -->
+                      <div
+                        class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                      >
+                        <!-- Modal header -->
+                        <div
+                          class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600"
+                        >
+                          <div class="px-6 rounded-t dark:border-gray-600">
+                            <h3
+                              class="text-base font-semibold text-gray-900 lg:text-xl dark:text-white"
+                              id="attachmentModalTitle"
+                            >
+                              Add/ Edit Attachment
+                            </h3>
+                          </div>
+                          <button
+                            id="attachment_close_button"
+                            type="button"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            <svg
+                              class="w-3 h-3"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 14 14"
+                            >
+                              <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                              />
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                          </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-6 space-y-6">
+                          <div class="mb-3">
+                            <input
+                              class="relative m-0 block w-full min-w-0 flex-auto cursor-pointer rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-xs font-normal text-neutral-700 transition duration-300 ease-in-out file:-mx-3 file:-my-[0.32rem] file:cursor-pointer file:overflow-hidden file:rounded-none file:border-0 file:border-solid file:border-inherit file:bg-neutral-100 file:px-3 file:py-[0.32rem] file:text-neutral-700 file:transition file:duration-150 file:ease-in-out file:[border-inline-end-width:1px] file:[margin-inline-end:0.75rem] hover:file:bg-neutral-200 focus:border-primary focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:file:bg-neutral-700 dark:file:text-neutral-100 dark:focus:border-primary"
+                              id="formFileSm"
+                              type="file"
+                              aria-describedby="file_input_help"
+                            />
+                            <p
+                              class="mt-1 text-sm text-gray-500 dark:text-gray-300"
+                              id="file_input_help"
+                            >
+                              Size Limit: 16MB, Select 1 File at a time
+                            </p>
+                          </div>
+                          <div
+                            class="flex my-2 hidden"
+                            id="addTimeStampCaption"
+                          >
+                            <input
+                              type="checkbox"
+                              id="addTimeStamp_optionCaption"
+                              checked
+                            />
+                            <label
+                              class="ml-2"
+                              id="addTimeStamp_optionTextCaption"
+                              >Add Time Stamp
+                              <b
+                                >(Important don't uncheck: this will reduce
+                                numbers)</b
+                              ></label
+                            >
+                            <!-- <img src="./assets/crown.png" style="height:15px; width:15px;" class="ml-1 reviewUs" /> -->
+                          </div>
+
+                          <p
+                            class="text-base font-normal text-gray-500 dark:text-gray-400"
+                          >
+                            <span id="attachment_modal_file_name_text"
+                              >File Name: </span
+                            ><span id="attachment_modal_file_name"></span>
+                          </p>
+                          <p
+                            class="text-base font-normal text-gray-500 dark:text-gray-400"
+                          >
+                            <span id="attachment_modal_file_type_text"
+                              >File Type: </span
+                            ><span id="attachment_modal_file_type"></span>
+                          </p>
+                          <div id="attachment_caption_area" class="hidden">
+                            <div class="flex my-2" id="custom_div_attachment">
+                              <label id="custom_divText_attachment"
+                                >Send Personalized Message </label
+                              ><a
+                                href="https://youtu.be/uWOl6O0HTmE"
+                                target="_blank"
+                                ><i
+                                  class="fa fa-info-circle ml-1"
+                                  aria-hidden="true"
+                                ></i
+                              ></a>
+                              <!-- <img src="./assets/crown.png" style="height:15px; width:15px;" class="ml-1 reviewUs" /> -->
+
+                              <select
+                                id="token_attachment"
+                                style="max-width: 300px"
+                                class="ml-5 w-90 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                              >
+                                <option
+                                  id="personalizedVariable_attachment"
+                                  selected
+                                  disabled
+                                  value="default"
+                                >
+                                  Select Variable
+                                </option>
+                              </select>
+                            </div>
+                            <div
+                              id="message-line"
+                              style="
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                              "
+                            >
+                              <label
+                                for="attachment_modal_file_caption"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                id="attachment_caption"
+                                >Caption (Optional)</label
+                              >
+                              <h4>
+                                <span id="for_formatting_text"
+                                  >For formatting</span
+                                >: *<b>bold</b>* _<i>italic</i>_
+                                ~<del>strike</del>~
+                              </h4>
+                            </div>
+                            <textarea
+                              id="attachment_modal_file_caption"
+                              rows="4"
+                              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                              placeholder="Write your caption here..."
+                            ></textarea>
+                          </div>
+                        </div>
+                        <!-- Modal footer -->
+                        <div
+                          class="flex justify-center p-3 space-x-2 border-gray-200 rounded-b dark:border-gray-600"
+                        >
+                          <button
+                            id="attachment_modal_submit"
+                            type="button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    id="steps_for_attachments"
+                    hidden="true"
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      display: none;
+                      flex-direction: column;
+                    "
+                  >
+                    <div
+                      class="relative overflow-x-auto shadow-md sm:rounded-lg"
+                    >
+                      <table
+                        class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+                      >
+                        <thead
+                          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+                        >
+                          <tr>
+                            <th
+                              scope="col"
+                              class="px-2"
+                              style="width: 150px"
+                              id="attachmentFileName"
+                            >
+                              File name
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-2"
+                              style="width: 100px"
+                              id="attachmentFileType"
+                            >
+                              File Type
+                            </th>
+                            <th
+                              scope="col"
+                              class="px-2"
+                              style="width: 120px"
+                              id="attachmentFileCaption"
+                            >
+                              Caption
+                            </th>
+
+                            <th
+                              scope="col"
+                              class="px-3"
+                              id="attachmentFileAction"
+                            >
+                              Action(s)
+                            </th>
+                          </tr>
+                        </thead>
+                        <tr
+                          id="sample-attachment-data"
+                          class="hidden bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                        >
+                          <th
+                            scope="row"
+                            class="fileName px-2 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                          >
+                            Name.png
+                          </th>
+                          <td class="px-2 fileType">Image</td>
+                          <td class="px-2 fileCaption">Hello Friends</td>
+
+                          <td class="px-2 text-right">
+                            <a
+                              href="#"
+                              class="px-1 font-medium text-blue-600 dark:text-blue-500 hover:underline fileEdit"
+                              >Edit/View</a
+                            >
+                            <a
+                              href="#"
+                              class="font-medium text-blue-600 dark:text-blue-500 hover:underline fileDelete"
+                              >Delete</a
+                            >
+                          </td>
+                        </tr>
+                        <tbody id="attachmentBody"></tbody>
+                      </table>
+                    </div>
+                    <br />
+
+                    <p id="attachmentNote">
+                      Note: You can add upto 7 files, caption allowed only in
+                      images and videos
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex my-2" id="unsub_div">
+                <input type="checkbox" id="unsubscribe_option" />
+                <label class="ml-2" id="unsubscribe_optionText"
+                  >Add Option To Unsubscribe</label
+                ><a href="https://youtu.be/3ShBTTYWFwQ" target="_blank"
+                  ><i class="fa fa-info-circle ml-1" aria-hidden="true"></i
+                ></a>
+                <!-- <img src="./assets/crown.png" style="height:15px; width:15px;" class="ml-1 reviewUs" /> -->
+              </div>
+
+              <div class="flex my-2" id="custom_div">
+                <input type="checkbox" id="is_custom_message" />
+                <label class="ml-2" id="custom_divText"
+                  >Send Personalized Message </label
+                ><a href="https://youtu.be/uWOl6O0HTmE" target="_blank"
+                  ><i class="fa fa-info-circle ml-1" aria-hidden="true"></i
+                ></a>
+                <!-- <img src="./assets/crown.png" style="height:15px; width:15px;" class="ml-1 reviewUs" /> -->
+
+                <select
+                  id="token"
+                  style="display: none; max-width: 300px"
+                  class="ml-5 w-90 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                >
+                  <option
+                    id="personalizedVariable"
+                    selected
+                    disabled
+                    value="default"
+                  >
+                    Select Variable
+                  </option>
+                </select>
+              </div>
+
+              <!-- Send each message with a time gap in seconds. -->
+
+              <div class="flex my-2" id="timer-checkbox-div">
+                <input type="checkbox" id="timer-checkbox" />
+                <label class="ml-2" id="timer-checkboxText">Time Gap</label
+                ><a href="https://youtu.be/3ShBTTYWFwQ" target="_blank"
+                  ><i class="fa fa-info-circle ml-1" aria-hidden="true"></i
+                ></a>
+                <!-- <img src="./assets/crown.png" style="height:15px; width:15px;" class="ml-1 reviewUs" /> -->
+              </div>
+
+              <div id="timer-gap-inputs" class="hidden ml-5">
+                <div class="flex">
+                  &nbsp;&nbsp;
+                  <div id="timeGapText">
+                    Send each message with a time gap of
+                  </div>
+                  <input
+                    type="number"
+                    placeholder="10"
+                    id="time-delay"
+                    class="p-1 mx-2 underline border border-green-500"
+                    style="width: 50px; height: 25px"
+                    value="10"
+                    min="1"
+                  />
+                  to
+                  <input
+                    type="number"
+                    placeholder="10"
+                    id="time-delay-to"
+                    class="p-1 mx-2 underline border border-green-500"
+                    style="width: 50px; height: 25px"
+                    value="10"
+                    max="300"
+                  />
+                  <div id="timeGapSeconds">seconds.</div>
+                </div>
+                <!-- <div>OR</div>
+                <div id="randomize" class="mt-2">
+                  <input
+                    type="checkbox"
+                    name="randomize"
+                    id="timer_gap_random"
+                  />
+                  <label for="randomize" id="timeGapRandomText"
+                    >Send each message with a time gap of Random seconds</label
+                  >
+                </div> -->
+              </div>
+
+              <!-- <div class="flex my-2" id="timer-checkbox-div">
+                <input type="checkbox" id="batching-timer-checkbox" />
+                <label class="ml-2">Batching</label>
+                <a
+                  href="https://www.youtube.com/watch?v=3ShBTTYWFwQ&t=74s"
+                  target="_blank"
+                  ><i class="fa fa-info-circle ml-1" aria-hidden="true"></i
+                ></a>
+              </div>
+
+              <div
+                id="batching-timer-inputs"
+                style="
+                  display: none;
+                  margin-top: 15px;
+                  justify-content: space-between;
+                  margin-bottom: 15px;
+                  margin-left: auto;
+                  margin-right: auto;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                  "
+                >
+                  <div>Send in a batch of</div>
+                  <input
+                    type="number"
+                    placeholder="3"
+                    id="batching-numbers"
+                    class="p-1 mx-2 underline border border-green-500"
+                    style="width: 50px; height: 25px"
+                  />
+
+                  <div>messages and then wait for</div>
+
+                  <input
+                    type="number"
+                    placeholder="3"
+                    id="batching-time-delay"
+                    class="p-1 mx-2 underline border border-green-500"
+                    style="width: 50px; height: 25px"
+                  />
+                  <div>seconds after each batch</div>
+                </div>
+              </div> -->
+
+              <div class="flex my-2" id="addTimeStamp">
+                <input type="checkbox" id="addTimeStamp_option" />
+                <label class="ml-2" id="addTimeStamp_optionText"
+                  >Add Time Stamp
+                  <b
+                    >(Important don't uncheck: this will reduce numbers)</b
+                  ></label
+                >
+                <!-- <img src="./assets/crown.png" style="height:15px; width:15px;" class="ml-1 reviewUs" /> -->
+              </div>
+            </div>
+          </div>
+
+          <hr
+            class="h-0 mt-5 mb-3 border border-solid border-t-0 border-gray-700 opacity-25"
+          />
+
+          <div
+            id="message-line"
+            style="
+              display: flex;
+              margin-top: 15px;
+              justify-content: space-between;
+              margin-bottom: 10px;
+              align-items: center;
+            "
+          >
+            <h4 style="margin: 0; font-weight: bold" id="message-lineText">
+              Type your Message here
+            </h4>
+            <h4>
+              <span id="for_formatting_text2">For formatting</span>:
+              *<b>bold</b>* _<i>italic</i>_ ~<del>strike</del>~
+            </h4>
+            <button
+              id="msg_preview_button"
+              type="button"
+              class="pr-2 text-xs font-medium text-center inline-flex items-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 disabled:bg-slate-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              <svg
+                fill="#ffffff"
+                height="161px"
+                width="161px"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="-163.84 -163.84 839.68 839.68"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                enable-background="new 0 0 512 512"
+                stroke="#ffffff"
+                stroke-width="0.00512"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      d="m494.8,241.4l-50.6-49.4c-50.1-48.9-116.9-75.8-188.2-75.8s-138.1,26.9-188.2,75.8l-50.6,49.4c-11.3,12.3-4.3,25.4 0,29.2l50.6,49.4c50.1,48.9 116.9,75.8 188.2,75.8s138.1-26.9 188.2-75.8l50.6-49.4c4-3.8 11.7-16.4 0-29.2zm-238.8,84.4c-38.5,0-69.8-31.3-69.8-69.8 0-38.5 31.3-69.8 69.8-69.8 38.5,0 69.8,31.3 69.8,69.8 0,38.5-31.3,69.8-69.8,69.8zm-195.3-69.8l35.7-34.8c27-26.4 59.8-45.2 95.7-55.4-28.2,20.1-46.6,53-46.6,90.1 0,37.1 18.4,70.1 46.6,90.1-35.9-10.2-68.7-29-95.7-55.3l-35.7-34.7zm355,34.8c-27,26.3-59.8,45.1-95.7,55.3 28.2-20.1 46.6-53 46.6-90.1 0-37.2-18.4-70.1-46.6-90.1 35.9,10.2 68.7,29 95.7,55.4l35.6,34.8-35.6,34.7z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+              <span id="msg_preview_text">Test Message</span>
+            </button>
+          </div>
+
+          <textarea
+            name="comment"
+            id="message"
+            placeholder="Type message here..."
+            style="margin-bottom: 20px; font-size: 15px"
+            required
+          ></textarea>
+
+          <p
+            id="message-overflow-text"
+            style="color: red; text-align: center; display: none"
+          >
+            Don't send more than 50 messages on first day
+          </p>
+          <p
+            id="error-text"
+            style="color: red; text-align: center; display: none"
+          >
+            <b>Message text should not be empty</b>
+          </p>
+
+          <div class="flex justify-between">
+            <div>
+              <button
+                id="addTemplate"
+                class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-4 rounded h-100 mr-1 inline-flex items-center"
+              >
+                <img
+                  src="./assets/icons/template.png"
+                  style="height: 15px; width: 15px"
+                  class="mr-1"
+                />
+                <span id="addTemplateText">Add template</span>
+              </button>
+              <a href="https://youtu.be/-oS_bcAtllA" target="_blank"
+                ><i class="fa fa-info-circle mr-5" aria-hidden="true"></i
+              ></a>
+            </div>
+
+            <!-- filter progress bar -->
+            <div class="progress-container" id="progress-container-sent">
+              <div class="progress-bar" id="progress-bar-sent">
+                <div
+                  class="progress-indicator"
+                  id="progress-indicator-sent"
+                ></div>
+              </div>
+
+              <strong id="sorted-number-sent" class="text-green-600"
+                >2/3</strong
+              >
+              <span id="msgSentDisplayText">message(s)</span>
+            </div>
+            <!-- filter progress bar -->
+
+            <div>
+              <select
+                id="template-dropdown"
+                style="max-width: 200px"
+                class="selectpicker"
+              >
+                <option data-icon="fa" selected disabled value="default">
+                  Select from template
+                </option>
+                <!-- <option value="1"> tesdsnkfeds </option>
+            <option value="2"> triing a</option> -->
+              </select>
+
+              <span
+                class="fa fa-trash"
+                id="deleteTemplate"
+                style="display: none"
+              ></span>
+            </div>
+          </div>
+          <!--  stop, send and export report download button  -->
+
+          <div class="flex justify-between my-3 align-center">
+            <!-- <div id="mobile_number" class="align-left"> Test </div> -->
+            <div style="margin-right: 10px">
+              <span style="padding-top: 10px; display: none" id="adminNumber"
+                >+98988</span
+              ><br />
+              <b
+                ><span style="padding-top: 10px"
+                  ><span id="planInfoText">PLAN: </span
+                  ><span id="planInfo">FREE</span></span
+                ></b
+              >
+            </div>
+
+            <div class="mx-0 align-center">
+              <button
+                id="pause"
+                style="display: none"
+                class="bg-yellow-600 hover:bg-yellow-700 cursor-pointer text-white font-bold py-2 px-3 rounded h-100 inline-flex items-center"
+                name="stop"
+                value="Stop"
+              >
+                <img
+                  src="./assets/icons/stop.png"
+                  style="height: 15px; width: 15px"
+                  class="mr-1"
+                />
+                <span id="pauseBtnText">Pause</span>
+              </button>
+            </div>
+            <div class="mx-0">
+              <button
+                id="continue"
+                style="display: none"
+                class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-3 rounded h-100 inline-flex items-center justify-center"
+              >
+                <span id="continueBtnText">Continue</span>
+                <img
+                  src="./assets/icons/send.png"
+                  style="height: 15px; width: 15px"
+                  class="ml-1"
+                />
+              </button>
+            </div>
+            <div class="mx-0">
+              <button
+                id="stop"
+                style="display: none"
+                class="bg-red-600 hover:bg-red-700 cursor-pointer text-white font-bold py-2 px-3 rounded h-100 inline-flex items-center"
+                name="stop"
+                value="Stop"
+              >
+                <img
+                  src="./assets/icons/stop.png"
+                  style="height: 15px; width: 15px"
+                  class="mr-1"
+                />
+                <span id="stopBtnText">Stop</span>
+              </button>
+            </div>
+            <div class="mx-0">
+              <button
+                id="send"
+                style="display: ''"
+                class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-3 rounded h-100 inline-flex items-center justify-center"
+              >
+                <span id="sendBtnText">Send</span>
+                <img
+                  src="./assets/icons/send.png"
+                  style="height: 15px; width: 15px"
+                  class="ml-1"
+                />
+              </button>
+            </div>
+
+            <div>
+              <button
+                id="export_results"
+                style="display: ''"
+                class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-3 rounded h-100 inline-flex justify-center"
+                value=""
+              >
+                <img
+                  src="./assets/icons/export.png"
+                  style="height: 15px; width: 15px"
+                  class="mr-1"
+                />
+                <span id="reportBtnText">Report</span>
+              </button>
+            </div>
+
+            <div style="margin-right: 10px">
+              <span style="padding-top: 10px" id="myNumber"></span><br />
+              <span style="padding-top: 10px; display: none" id="myVersion"
+                >V 3.0.3</span
+              ><br />
+              <a href="#"
+                ><u
+                  ><span
+                    style="padding-top: 10px; color: blue"
+                    id="supportFooter"
+                    >Contact Support</span
+                  ></u
+                ></a
+              ><br />
+              <a href="#"
+                ><u
+                  ><span
+                    style="padding-top: 10px; color: blue"
+                    id="reviewFooter"
+                    >Review Us</span
+                  ></u
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="collaboratorsTab" class="tabcontent">
+        <div class="text-lg text-center mt-2">
+          <span id="addMemberHeadingText">Add Members</span>
+          <a href="https://youtu.be/N06i5VG5NTI" target="_blank"
+            ><i class="fa fa-info-circle ml-1" aria-hidden="true"></i
+          ></a>
+        </div>
+
+        <div class="flex h-50 items-center my-2 justify-between">
+          <div
+            class="flex ml-5 border-gray-500 dark:border-gray-700 hover:bg-gray-300 cursor-pointer rounded-lg border p-1"
+          >
+            <div class="text-base" id="memberCount">19/20 members used</div>
+          </div>
+
+          <div>
+            <button
+              id="addMember"
+              class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-4 rounded h-100 mr-5 inline-flex items-center"
+            >
+              <img
+                src="./assets/icons/person.png"
+                style="height: 15px; width: 15px"
+                class="mr-1"
+              />
+
+              <span id="addMemberBtnText">Add Member</span>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="addingMember"
+          class="hidden flex flex-col align-center justify-center"
+        >
+          <div class="mb-6">
+            <label
+              id="addMemberModalName"
+              for="large-input"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="memberName"
+              placeholder="Team Member Name"
+              class="block p-2 w-full text-gray-900 bg-gray-50 rounded-xl border border-green-700 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label
+              id="addMemberModalNumber"
+              for="large-input"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >Phone Number</label
+            >
+            <input
+              type="text"
+              id="memberPhone"
+              placeholder="Team Phone Number ( Add country code without any + or () ) eg: 919999988888"
+              class="block p-2 w-full text-gray-900 bg-gray-50 rounded-xl border border-green-700 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+
+          <p
+            class="text-center text-base mb-1 underline"
+            id="addTeamMemberNote"
+          >
+            Add your team members so that they can use WAMessager Premium too
+          </p>
+
+          <button
+            id="addNewMember"
+            class="w-100 bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-4 rounded h-100 mr-5 inline-flex items-center justify-center"
+          >
+            <img
+              src="./assets/icons/person.png"
+              style="height: 15px; width: 15px"
+              class="mr-1"
+            />
+
+            <span id="addMemberAddBtnText">Add</span>
+          </button>
+        </div>
+
+        <div class="w-full max-w-2xl px-4 mt-2">
+          <div
+            class="border rounded-lg border pb-6 border-gray-200 dark:border-gray-700"
+          >
+            <div
+              class="flex items-center border-b border-gray-200 dark:border-gray-700 justify-between px-6 py-3"
+            >
+              <p
+                tabindex="0"
+                id="teamMemberNameText"
+                class="focus:outline-none text-sm lg:text-xl font-semibold leading-tight text-gray-800 dark:text-white"
+              >
+                Team Member Name
+              </p>
+
+              <p
+                tabindex="0"
+                id="teamMemberPhoneNumberText"
+                class="focus:outline-none text-sm lg:text-xl font-semibold leading-tight text-gray-800 dark:text-white"
+              >
+                Phone Number
+              </p>
+
+              <p
+                tabindex="0"
+                id="RemoveMemberText"
+                class="focus:outline-none text-sm lg:text-xl font-semibold leading-tight text-gray-800 dark:text-white"
+              >
+                Remove Member
+              </p>
+            </div>
+            <div class="px-6 pt-6 overflow-x-auto">
+              <table class="w-full whitespace-nowrap">
+                <tbody id="memberTable">
+                  <div id="noteamMember" style="text-align: center">
+                    No team members
+                  </div>
+                  <tr
+                    tabindex="0"
+                    class="teamMember hidden focus:outline-none flex items-center justify-between mb-5 mt-2"
+                  >
+                    <td>
+                      <div class="flex items-center">
+                        <div class="rounded-sm p-2.5">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth="{2}"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                            />
+                          </svg>
+                        </div>
+                        <div class="pl-3">
+                          <div class="flex items-center text-sm leading-none">
+                            <p
+                              class="font-semibold text-gray-800 dark:text-white memberName"
+                            >
+                              {{Name}}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="">
+                      <p
+                        class="text-sm font-semibold text-gray-800 dark:text-white memberNumber"
+                      >
+                        {{phoneNumber}}
+                      </p>
+                    </td>
+                    <td>
+                      <button
+                        class="removeMember bg-red-700 hover:bg-red-900 cursor-pointer text-white font-bold py-2 px-4 rounded h-100 ml-5 inline-flex items-center justify-center"
+                      >
+                        <img
+                          src="./assets/icons/person.png"
+                          style="height: 15px; width: 15px"
+                          class="mr-1"
+                        />
+                        <span id="removeTeamMemberButton">Remove</span>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="GetPremium" class="tabcontent">
+        <h3 class="font-bold mt-3 text-base" id="getPremiumHeading">
+          These are the features you can enjoy
+        </h3>
+        <ol style="font-size: 15px" class="list-decimal ml-4">
+          <li id="getPremium1">
+            Send <strong>unlimited</strong> WhatsApp messages to your customers.
+          </li>
+          <li id="getPremium2">
+            Download <strong>unlimited</strong> WhatsApp Group Contacts in an
+            excel file.
+          </li>
+          <li id="getPremium3">
+            Send personalized messages to your customers by uploading an excel
+            file and selecting customization on wamessager.
+          </li>
+          <!-- <li id="getPremium9">
+            Number <strong>batching</strong> feature to send WhatsApp messages
+            at different times of the day with single click.
+          </li> -->
+          <li id="getPremium4">
+            Give <strong>unsubscribe</strong> option to your customers, so that
+            they don't report you as spam and prevent your number from getting
+            banned by WhatsApp
+          </li>
+          <li id="getPremium5">
+            Send <strong>image, video, audio, file</strong> attachments.
+          </li>
+          <li id="getPremium6">
+            Set <strong>time delay</strong> between each message to lower
+            blocking chances.
+          </li>
+          <li id="getPremium7">
+            Download Delivery Reports for better analytics of your Whatsapp
+            campaigns.
+          </li>
+          <li id="getPremium8">
+            Premium Customer support over
+            <strong>whatsapp, email and google meet.</strong>
+          </li>
+        </ol>
+        <div class="flex align-center my-3" style="justify-content: center">
+          <button
+            id="buypremium1"
+            class="bg-green-700 hover:bg-green-900 cursor-pointer text-white font-bold py-2 px-4 rounded h-100 mr-5 inline-flex items-center"
+          >
+            Buy Premium
+          </button>
+        </div>
+      </div>
+
+      <div id="EnhancementTab" class="tabcontent">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+          <span id="EnhancementSettings">Privacy Blur Options</span>
+          <a href="https://youtu.be/pkLubQrbywA" target="_blank"
+            ><i class="fa fa-info-circle ml-1" aria-hidden="true"></i
+          ></a>
+        </h3>
+        <span
+          ><b
+            >Note: Privacy option may not work for some users due to recent
+            whatsapp changes, our team is already working on it. Thanks for
+            being patient</b
+          ></span
+        >
+        <div style="text-align: center">
+          <label
+            class="relative inline-flex items-center mb-5 cursor-pointer"
+            title="Select/Unselect all Blur options"
+          >
+            <input type="checkbox" id="blurToggleAll" class="sr-only peer" />
+            <div
+              class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+            ></div>
+            <span
+              class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+              id="blurToggleAllText"
+              >Select All</span
+            >
+          </label>
+        </div>
+
+        <div class="flex">
+          <div style="margin-left: 5%; display: flex; flex-direction: column">
+            <label
+              class="relative inline-flex items-center mb-5 cursor-pointer"
+              title="Blurs all messages in the chat."
+            >
+              <input
+                type="checkbox"
+                id="blurAllMessageToggle"
+                class="sr-only peer"
+              />
+              <div
+                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+              <span
+                class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                id="blurAllMessageToggleText"
+                >All messages in chat</span
+              >
+            </label>
+            <label
+              class="relative inline-flex items-center mb-5 cursor-pointer"
+              title="Blurs all message previews on the left."
+            >
+              <input
+                type="checkbox"
+                id="blurLastMesssageToggle"
+                class="sr-only peer"
+              />
+              <div
+                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+              <span
+                class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                id="blurLastMesssageToggleText"
+                >Last messages preview</span
+              >
+            </label>
+            <label
+              class="relative inline-flex items-center mb-5 cursor-pointer"
+              title="Blurs all images, videos, stickers, ... in separation from the text."
+            >
+              <input
+                type="checkbox"
+                id="blurMediaPreviewToggle"
+                class="sr-only peer"
+              />
+              <div
+                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+              <span
+                class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                id="blurMediaPreviewToggleText"
+                >Media preview</span
+              >
+            </label>
+            <label
+              class="relative inline-flex items-center mb-5 cursor-pointer"
+              title="Blurs all small preview icons of images, videos, ... while viewing an image, video, ..."
+            >
+              <input
+                type="checkbox"
+                id="blurMediaGallaryToggle"
+                class="sr-only peer"
+              />
+              <div
+                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+              <span
+                class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                id="blurMediaGallaryToggleText"
+                >Media gallery</span
+              >
+            </label>
+            <label
+              class="relative inline-flex items-center mb-5 cursor-pointer"
+              title="Makes the color in your input field lighter to make it hard to read."
+            >
+              <input
+                type="checkbox"
+                id="blurTextInputToggle"
+                class="sr-only peer"
+              />
+              <div
+                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+              <span
+                class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                id="blurTextInputToggleText"
+                >Text input</span
+              >
+            </label>
+          </div>
+          <div style="margin-left: 10%; display: flex; flex-direction: column">
+            <label
+              class="relative inline-flex items-center mb-5 cursor-pointer"
+              title="Blurs all profile pictures."
+            >
+              <input
+                type="checkbox"
+                id="blurProfilePictureToggle"
+                class="sr-only peer"
+              />
+              <div
+                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+              <span
+                class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                id="blurProfilePictureToggleText"
+                >Profile pictures</span
+              >
+            </label>
+            <label
+              class="relative inline-flex items-center mb-5 cursor-pointer"
+              title="Blurs all group and usernames."
+            >
+              <input
+                type="checkbox"
+                id="blurGroupUserNameToggle"
+                class="sr-only peer"
+              />
+              <div
+                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+              <span
+                class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                id="blurGroupUserNameToggleText"
+                >Group/Users names</span
+              >
+            </label>
+            <label
+              class="relative inline-flex items-center mb-5 cursor-pointer"
+              title="Allows you to turn off the delay before revealing an item on hover."
+            >
+              <input
+                type="checkbox"
+                id="noTransitionDelayToggle"
+                class="sr-only peer"
+              />
+              <div
+                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+              <span
+                class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                id="noTransitionDelayToggleText"
+                >No transition delay</span
+              >
+            </label>
+            <label
+              class="relative inline-flex items-center mb-5 cursor-pointer"
+              title="Unblurs all when you hover over the WhatsApp Web app."
+            >
+              <input
+                type="checkbox"
+                id="unblurAllToggle"
+                class="sr-only peer"
+              />
+              <div
+                class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+              ></div>
+              <span
+                class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                id="unblurAllToggleText"
+                >Unblur all on app hover</span
+              >
+            </label>
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>

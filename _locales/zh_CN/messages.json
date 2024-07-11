@@ -1,0 +1,530 @@
+{
+  "extName": {
+    "message": "WA Bulk Message Sender - WAMessager"
+  },
+  "extDescription": {
+    "message": "Premium WA Bulk Message Sender - Send Whatsapp Messages, Attachments, Personalized Message | Software | Marketing | WAMessager"
+  },
+  "extTitle": {
+    "message": "WA Bulk Message Sender - WAMessager"
+  },
+  "extMessageCount": {
+    "message": "已发送消息数："
+  },
+  "tabHome": {
+    "message": "主页"
+  },
+  "tabTeam": {
+    "message": "团队"
+  },
+  "tabPremium": {
+    "message": "购买高级版"
+  },
+  "tabTutorials": {
+    "message": "教程"
+  },
+  "uploadExcelBtn": {
+    "message": "上传 Excel"
+  },
+  "downloadTemplateBtn": {
+    "message": "Excel 模板"
+  },
+  "contactFoundText": {
+    "message": "找到 $cf$ 个联系人",
+    "placeholders": {
+      "cf": {
+        "content": "$1"
+      }
+    }
+  },
+  "filterBtn": {
+    "message": "筛选号码"
+  },
+  "downloadGroupBtn": {
+    "message": "下载群组"
+  },
+  "options_divText": {
+    "message": "号码列"
+  },
+  "numberPlaceholder": {
+    "message": "添加带国家代码的号码，例如 91933333333，用逗号隔开 + 回车"
+  },
+  "numberPlaceholderDisabled": {
+    "message": "需要先删除 Excel 表格，才能手动输入号码"
+  },
+  "sortedNumberFilterText": {
+    "message": "筛选联系人"
+  },
+  "downloadGroupHeadingText": {
+    "message": "下载您的群组/标签/聊天联系人"
+  },
+  "exportGroupText": {
+    "message": "从以下位置导出联系人："
+  },
+  "exportGroupPlaceholder": {
+    "message": "选择要导出的群组"
+  },
+  "exportLabelPlaceholder": {
+    "message": "选择要导出的标签"
+  },
+  "exportGroup": {
+    "message": "立即导出"
+  },
+  "selectAllGroupsText": {
+    "message": "全选"
+  },
+  "msg_preview_text": {
+    "message": "测试消息"
+  },
+  "sheet_select_text": {
+    "message": "选择表格"
+  },
+  "excel_from_text": {
+    "message": "从行开始"
+  },
+  "excel_to_text": {
+    "message": "到行结束"
+  },
+  "for_formatting_text": {
+    "message": "用于格式化"
+  },
+  "exportFromListText": {
+    "message": "从聊天列表中导出联系人："
+  },
+  "exportList": {
+    "message": "导出列表"
+  },
+  "allChatsText": {
+    "message": "从聊天列表导出所有联系人信息"
+  },
+  "unsavedChatsText": {
+    "message": "从聊天列表导出未保存的联系人信息"
+  },
+  "downloadGroupCloseBtnText": {
+    "message": "关闭"
+  },
+  "clear": {
+    "message": "清空"
+  },
+  "messageSettingsText": {
+    "message": "消息设置"
+  },
+  "send_attachmentsText": {
+    "message": "发送附件"
+  },
+  "unsubscribe_optionText": {
+    "message": "添加取消订阅选项"
+  },
+  "custom_divText": {
+    "message": "发送个性化消息"
+  },
+  "timerCheckboxText": {
+    "message": "时间间隔"
+  },
+  "msgLineText": {
+    "message": "在此输入消息"
+  },
+  "msgOverflowText": {
+    "message": "首日不要发送超过 50 条消息"
+  },
+  "errortext": {
+    "message": "消息文本不能为空"
+  },
+  "addTemplateText": {
+    "message": "添加模板"
+  },
+  "planInfoText": {
+    "message": "计划："
+  },
+  "supportFooter": {
+    "message": "联系客服"
+  },
+  "pauseBtnText": {
+    "message": "暂停"
+  },
+  "continueBtnText": {
+    "message": "继续"
+  },
+  "stopBtnText": {
+    "message": "停止"
+  },
+  "sendBtnText": {
+    "message": "发送"
+  },
+  "reportBtnText": {
+    "message": "报告"
+  },
+
+  "addMemberHeadingText": {
+    "message": "添加团队成员"
+  },
+  "addMemberBtnText": {
+    "message": "添加成员"
+  },
+  "memberCount": {
+    "message": "已使用$addedMemberCount$/$allowedMemberCount$个成员",
+    "placeholders": {
+      "addedMemberCount": {
+        "content": "$1"
+      },
+      "allowedMemberCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "teamMemberNameText": {
+    "message": "团队成员名称"
+  },
+  "teamMemberPhoneNumberText": {
+    "message": "WhatsApp 号码"
+  },
+  "RemoveMemberText": {
+    "message": "移除成员"
+  },
+  "getPremiumHeading": {
+    "message": "您可以享受以下功能"
+  },
+  "getPremium1": {
+    "message": "向您的客户发送无限量的 WhatsApp 消息。"
+  },
+  "getPremium2": {
+    "message": "在 Excel 文件中下载无限量的 WhatsApp 群组联系人。"
+  },
+  "getPremium3": {
+    "message": "通过上传 Excel 文件并在 WAMessenger 上选择个性化设置，向您的客户发送个性化消息。"
+  },
+  "getPremium4": {
+    "message": "提供取消订阅选项给您的客户，以避免他们将您的号码标记为垃圾信息并导致 WhatsApp 封禁您的号码。"
+  },
+  "getPremium5": {
+    "message": "发送图片、视频、音频和文件附件。"
+  },
+  "getPremium6": {
+    "message": "设置消息之间的时间延迟，以降低被封禁的风险。"
+  },
+  "getPremium7": {
+    "message": "下载交付报告，以获得更好的 WhatsApp 营销数据分析。"
+  },
+  "getPremium8": {
+    "message": "提供 WhatsApp、电子邮件和 Google Meet 的高级客户支持。"
+  },
+  "premmium_feature": {
+    "message": "这是高级版功能"
+  },
+  "template_premmium_feature": {
+    "message": "模板是高级版功能"
+  },
+  "noteamMember": {
+    "message": "升级计划以添加团队成员"
+  },
+  "messagePlaceholder": {
+    "message": "在此输入消息"
+  },
+  "uploadExcelDisabledLabel": {
+    "message": "删除以下号码，以上传 Excel 表格"
+  },
+  "firstMessageText": {
+    "message": "让我们开始发送您的第一条消息"
+  },
+  "firstMessageReadyText": {
+    "message": "您已准备好发送第一条消息"
+  },
+  "onboardingMessage": {
+    "message": "您好，*我很兴奋地要使用WAM来推动我的业务*，与其他扩展不同，WAM具有最优秀的功能，快速的客户支持和最实惠的定价。\n使用WAM，我可以：\n发送个性化消息\n发送可点击链接，例如 \n带标题发送最多7个附件\n轻松与我的联系人建立联系\n在这里获得全天候快速支持"
+  },
+  "onboardingSendIntro": {
+    "message": "点击这里开始，并让您的业务自动运行"
+  },
+  "onboardingSendText": {
+    "message": "开始使用"
+  },
+  "syncMsgText": {
+    "message": "启用同步以使用 WAMessager"
+  },
+  "syncMessageNote": {
+    "message": "（我们需要此项服务以更好地为您提供服务）"
+  },
+
+  "uncheck_attachment": {
+    "message": "取消勾选附件"
+  },
+  "imageAttmntText": {
+    "message": "图像/视频"
+  },
+  "docAttmntText": {
+    "message": "文档"
+  },
+  "contactAttmntText": {
+    "message": "联系人"
+  },
+  "timeGapText": {
+    "message": "每条消息之间间隔时间为"
+  },
+  "timeGapSeconds": {
+    "message": "秒。"
+  },
+  "timeGapRandomText": {
+    "message": "每条消息之间间隔时间为随机秒数"
+  },
+  "msgSentDisplayText": {
+    "message": "条消息已尝试发送"
+  },
+  "adminNumber": {
+    "message": "您的团队管理员：<br>+$adminNumber$",
+    "placeholders": {
+      "adminNumber": {
+        "content": "$1"
+      }
+    }
+  },
+  "addTeamMemberNote": {
+    "message": "添加您的团队成员，以便他们也可以使用 WAMessager Premium"
+  },
+  "addMemberAddBtnText": {
+    "message": "添加"
+  },
+  "removeTeamMemberButton": {
+    "message": "删除"
+  },
+  "addTeamMemberPlaceholder": {
+    "message": "团队成员姓名"
+  },
+  "addTeamMemberPhonePlaceholder": {
+    "message": "团队成员电话号码（添加国家代码，不要添加任何+或()）例如：918297386514"
+  },
+  "iziToastExcelSizeError": {
+    "message": "错误"
+  },
+  "iziToastExcelSizeErrorMsg": {
+    "message": "请上传大小小于5MB的文件"
+  },
+  "iziToastMsgLimitWarning": {
+    "message": "警告！"
+  },
+  "iziToastMsgLimitWarningMsg": {
+    "message": "第一天不要发送超过 $msgLimit$ 条消息。您确定要继续吗？",
+    "placeholders": {
+      "msgLimit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgLeftMsg": {
+    "message": "您当前计划中剩余 $msgLimit$ 条消息。请添加最多 $msgLimit$ 个联系人",
+    "placeholders": {
+      "msgLimit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgFinishedMsg": {
+    "message": "感谢您使用 WAMessager，但似乎您的$msg_limit$条免费消息已用完。请升级以继续使用 WAMessager。",
+    "placeholders": {
+      "msg_limit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgQuotaExceedMsg": {
+    "message": "成员配额已超出"
+  },
+  "iziToastMemberAlreadyPresentWarning": {
+    "message": "成员已存在"
+  },
+  "iziToastMemberAlreadyPresentWarningMsg": {
+    "message": "成员只能添加一次"
+  },
+  "iziToastAddNamePhoneWarning": {
+    "message": "添加姓名和电话"
+  },
+  "iziToastAddNamePhoneWarningMsg": {
+    "message": "姓名和电话号码不能为空"
+  },
+  "iziToastMemberAddedSuccess": {
+    "message": "已添加"
+  },
+  "iziToastMemberAddedSuccessMsg": {
+    "message": "成员添加成功"
+  },
+  "iziToastUpgradeInfo": {
+    "message": "立即升级至 Premium！"
+  },
+  "iziToastUpgradeInfoMsg": {
+    "message": "感谢您使用WAMessager，您可以在免费计划中每天发送最多$msg_limit$条消息，若要发送更多消息，请升级您的计划。<br>请通过WhatsApp联系我们以获取5%的优惠券代码 $supportNumber$",
+    "placeholders": {
+      "msg_limit": {
+        "content": "$1"
+      },
+      "supportNumber": {
+        "content": "$2"
+      }
+    }
+  },
+  "extMessageCountDailyCount": {
+    "message": "每日剩余消息数："
+  },
+  "dailyMsgReset": {
+    "message": "重置倒计时："
+  },
+  "EnhancementSettings": {
+    "message": "隐私模糊选项"
+  },
+  "blurToggleAllText": {
+    "message": "全选"
+  },
+  "blurToggleAllTextTitle": {
+    "message": "选择/取消所有模糊选项"
+  },
+  "blurAllMessageToggleText": {
+    "message": "聊天中的所有消息"
+  },
+  "blurAllMessageToggleTextTitle": {
+    "message": "模糊聊天中的所有消息。"
+  },
+  "blurLastMesssageToggleText": {
+    "message": "最后一条消息预览"
+  },
+  "blurLastMesssageToggleTextTitle": {
+    "message": "模糊左侧所有消息预览。"
+  },
+  "blurMediaPreviewToggleText": {
+    "message": "媒体预览"
+  },
+  "blurMediaPreviewToggleTextTitle": {
+    "message": "将所有图片、视频、贴纸等与文本分开模糊。"
+  },
+  "blurMediaGallaryToggleText": {
+    "message": "媒体库"
+  },
+  "blurMediaGallaryToggleTextTitle": {
+    "message": "查看图片、视频等时，模糊所有小的预览图标。"
+  },
+  "blurTextInputToggleText": {
+    "message": "文本输入"
+  },
+  "blurTextInputToggleTextTitle": {
+    "message": "使输入框中的颜色变浅，使其难以阅读。"
+  },
+  "blurProfilePictureToggleText": {
+    "message": "个人资料图片"
+  },
+  "blurProfilePictureToggleTextTitle": {
+    "message": "模糊所有个人资料图片。"
+  },
+  "blurGroupUserNameToggleText": {
+    "message": "群组/用户名称"
+  },
+  "blurGroupUserNameToggleTextTitle": {
+    "message": "模糊所有群组和用户名。"
+  },
+  "noTransitionDelayToggleText": {
+    "message": "无过渡延迟"
+  },
+  "noTransitionDelayToggleTextTitle": {
+    "message": "允许您关闭悬停前的延迟显示效果。"
+  },
+  "unblurAllToggleText": {
+    "message": "悬停应用时取消所有模糊效果"
+  },
+  "unblurAllToggleTextTitle": {
+    "message": "当您悬停在 WhatsApp Web 应用程序上时取消所有模糊效果。"
+  },
+  "iziToastReviewTitle": {
+    "message": "给我们评分！这将帮助我们更好地服务更多人 😃🙏"
+  },
+  "iziToastReviewMessage": {
+    "message": "<br>这是由 WAMessager 团队开发的实惠扩展，帮助企业向客户发送 WhatsApp 消息，因此您无需购买其他昂贵的扩展。请通过 Chrome 商店对我们进行评分以表达您的支持。"
+  },
+  "iziToastReviewMessageOffer": {
+    "message": "<br><br><b>优惠：通过评价我们来延长您的试用期 1 周，请通过 WhatsApp 发送截图以享受优惠。</b><br>注意：每个号码只限一次。"
+  },
+  "reviewFooter": {
+    "message": "给我们评分"
+  },
+  "Enhancement": {
+    "message": "隐私"
+  },
+
+  "templateModifyTitle": {
+    "message": "模板"
+  },
+  "templateAddedMessage": {
+    "message": "添加成功"
+  },
+  "templateRemoveMessage": {
+    "message": "删除成功"
+  },
+  "attachmentAddButton": {
+    "message": "添加附件"
+  },
+  "attachmentFileName": {
+    "message": "文件名"
+  },
+  "attachmentFileType": {
+    "message": "文件类型"
+  },
+  "attachmentFileCaption": {
+    "message": "说明"
+  },
+  "attachmentFileAction": {
+    "message": "操作"
+  },
+  "attachmentEditAction": {
+    "message": "编辑/查看"
+  },
+  "attachmentDeleteAction": {
+    "message": "删除"
+  },
+  "attachmentNote": {
+    "message": "注意：您最多可以添加7个文件，说明仅限于图像和视频"
+  },
+  "file_input_help": {
+    "message": "大小限制：16MB，一次只能选择1个文件"
+  },
+  "attachment_modal_file_name_text": {
+    "message": "文件名"
+  },
+  "attachment_modal_file_type_text": {
+    "message": "文件类型"
+  },
+  "attachment_caption": {
+    "message": "说明（可选）"
+  },
+  "attachment_modal_file_caption_placeholder": {
+    "message": "在此处编写说明..."
+  },
+  "attachment_modal_submit": {
+    "message": "提交"
+  },
+  "attachmentModalTitle_edit": {
+    "message": "编辑说明"
+  },
+  "attachmentModalTitle_add": {
+    "message": "添加附件"
+  },
+  "fileSizeAlert": {
+    "message": "$fileName$ 的大小太大，[ 文件大小：$fileSize$ MB]。\n最大允许大小：16MB",
+    "placeholders": {
+      "fileName": {
+        "content": "$1"
+      },
+      "fileSize": {
+        "content": "$2"
+      }
+    }
+  },
+  "fileDuplicateAlert": {
+    "message": "$fileName$ 文件已选择。请选择其他文件",
+    "placeholders": {
+      "fileName": {
+        "content": "$1"
+      }
+    }
+  },
+  "fileEmptyAlert": {
+    "message": "请先选择文件以提交附件"
+  },
+  "addTimeStamp_optionText": {
+    "message": "添加时间戳 <b>（重要：不要取消选择，这将减少封禁机会）</b>"
+  }
+}

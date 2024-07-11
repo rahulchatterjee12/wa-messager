@@ -1,0 +1,529 @@
+{
+  "extName": {
+    "message": "Personalized Send Message On WhatsApp"
+  },
+  "extDescription": {
+    "message": "Premium WA Bulk Message Sender - Send Whatsapp Messages, Attachments, Personalized Message | Software | Marketing | WAMessager"
+  },
+  "extTitle": {
+    "message": "WA Bulk Message Sender - WAMessager"
+  },
+  "extMessageCount": {
+    "message": "Pesan Terkirim: "
+  },
+  "tabHome": {
+    "message": "Beranda"
+  },
+  "tabTeam": {
+    "message": "Tim"
+  },
+  "tabPremium": {
+    "message": "Beli Premium"
+  },
+  "tabTutorials": {
+    "message": "Tutorial"
+  },
+  "uploadExcelBtn": {
+    "message": "Unggah Excel"
+  },
+  "downloadTemplateBtn": {
+    "message": "Unduh Template Excel"
+  },
+  "contactFoundText": {
+    "message": "$cf$ kontak ditemukan",
+    "placeholders": {
+      "cf": {
+        "content": "$1"
+      }
+    }
+  },
+  "filterBtn": {
+    "message": "Saring Nomor"
+  },
+  "downloadGroupBtn": {
+    "message": "Unduh Grup"
+  },
+  "options_divText": {
+    "message": "Kolom Nomor"
+  },
+  "numberPlaceholder": {
+    "message": "Tambahkan Nomor dengan kode negara contoh 628123456789 dipisahkan dengan koma + Enter"
+  },
+  "numberPlaceholderDisabled": {
+    "message": "hapus lembar excel terlebih dahulu untuk memasukkan nomor secara manual"
+  },
+  "sortedNumberFilterText": {
+    "message": "kontak difilter"
+  },
+  "downloadGroupHeadingText": {
+    "message": "Unduh Kontak Grup/ Label/ Obrolan Anda"
+  },
+  "exportGroupText": {
+    "message": "Ekspor Kontak dari:"
+  },
+  "exportGroupPlaceholder": {
+    "message": "Pilih Grup untuk Ekspor"
+  },
+  "exportLabelPlaceholder": {
+    "message": "Pilih Label untuk Ekspor"
+  },
+  "exportGroup": {
+    "message": "Ekspor Sekarang"
+  },
+  "selectAllGroupsText": {
+    "message": "Pilih Semua"
+  },
+  "msg_preview_text": {
+    "message": "Pesan Uji"
+  },
+  "sheet_select_text": {
+    "message": "Pilih Lembar"
+  },
+  "excel_from_text": {
+    "message": "Baris dari"
+  },
+  "excel_to_text": {
+    "message": "Baris sampai"
+  },
+  "for_formatting_text": {
+    "message": "Untuk pemformatan"
+  },
+  "exportFromListText": {
+    "message": "Ekspor Kontak dari Daftar Chat:"
+  },
+  "exportList": {
+    "message": "Ekspor Daftar"
+  },
+  "allChatsText": {
+    "message": "Ekspor semua info kontak dari daftar chat"
+  },
+  "unsavedChatsText": {
+    "message": "Ekspor info kontak yang belum disimpan dari daftar chat"
+  },
+  "downloadGroupCloseBtnText": {
+    "message": "Tutup"
+  },
+  "clear": {
+    "message": "Hapus"
+  },
+  "messageSettingsText": {
+    "message": "Pengaturan Pesan"
+  },
+  "send_attachmentsText": {
+    "message": "Kirim Lampiran "
+  },
+  "unsubscribe_optionText": {
+    "message": "Tambahkan Opsi Berhenti Berlangganan "
+  },
+  "custom_divText": {
+    "message": "Kirim Pesan yang Dipersonalisasi "
+  },
+  "timerCheckboxText": {
+    "message": "Jeda Waktu "
+  },
+  "msgLineText": {
+    "message": "Ketik pesan Anda di sini"
+  },
+  "msgOverflowText": {
+    "message": "Jangan kirim lebih dari 50 pesan pada hari pertama"
+  },
+  "errortext": {
+    "message": "Teks pesan tidak boleh kosong"
+  },
+  "addTemplateText": {
+    "message": "Tambahkan Template"
+  },
+  "planInfoText": {
+    "message": "Paket: "
+  },
+  "supportFooter": {
+    "message": "Hubungi Dukungan"
+  },
+  "pauseBtnText": {
+    "message": "Jeda"
+  },
+  "continueBtnText": {
+    "message": "Lanjutkan"
+  },
+  "stopBtnText": {
+    "message": "Berhenti"
+  },
+  "sendBtnText": {
+    "message": "Kirim"
+  },
+  "reportBtnText": {
+    "message": "Laporan"
+  },
+
+  "addMemberHeadingText": {
+    "message": "Tambahkan Anggota Tim"
+  },
+  "addMemberBtnText": {
+    "message": "Tambahkan Anggota"
+  },
+  "memberCount": {
+    "message": "$addedMemberCount$/$allowedMemberCount$ anggota digunakan",
+    "placeholders": {
+      "addedMemberCount": {
+        "content": "$1"
+      },
+      "allowedMemberCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "teamMemberNameText": {
+    "message": "Nama Anggota Tim"
+  },
+  "teamMemberPhoneNumberText": {
+    "message": "Nomor WhatsApp"
+  },
+  "RemoveMemberText": {
+    "message": "Hapus Anggota"
+  },
+  "getPremiumHeading": {
+    "message": "Ini adalah fitur-fitur yang bisa dinikmati dengan Premium"
+  },
+  "getPremium1": {
+    "message": "Kirim pesan WhatsApp tanpa batas kepada pelanggan Anda."
+  },
+  "getPremium2": {
+    "message": "Unduh kontak Grup WhatsApp tanpa batas dalam format file Excel."
+  },
+  "getPremium3": {
+    "message": "Kirim pesan yang dipersonalisasi kepada pelanggan Anda dengan mengunggah file Excel dan memilih opsi personalisasi di WAMessenger."
+  },
+  "getPremium4": {
+    "message": "Berikan opsi berhenti berlangganan kepada pelanggan Anda, sehingga mereka tidak melaporkan Anda sebagai spam dan mencegah nomor Anda diblokir oleh WhatsApp."
+  },
+  "getPremium5": {
+    "message": "Kirim lampiran gambar, video, audio, dan file."
+  },
+  "getPremium6": {
+    "message": "Atur jeda waktu antara setiap pesan untuk mengurangi kemungkinan pemblokiran."
+  },
+  "getPremium7": {
+    "message": "Unduh Laporan Pengiriman untuk analisis kampanye WhatsApp yang lebih baik."
+  },
+  "getPremium8": {
+    "message": "Dukungan Pelanggan Premium melalui WhatsApp, email, dan Google Meet."
+  },
+  "premmium_feature": {
+    "message": "Ini adalah Fitur Premium"
+  },
+  "template_premmium_feature": {
+    "message": "Template adalah Fitur Premium"
+  },
+  "noteamMember": {
+    "message": "Tingkatkan paket untuk menambahkan anggota tim"
+  },
+  "messagePlaceholder": {
+    "message": "Ketik Pesan di Sini.."
+  },
+  "uploadExcelDisabledLabel": {
+    "message": "Hapus nomor dari bawah untuk mengunggah lembar Excel"
+  },
+  "firstMessageText": {
+    "message": "Mari memulai dengan mengirimkan pesan pertama Anda"
+  },
+  "firstMessageReadyText": {
+    "message": "Anda siap untuk mengirimkan pesan pertama Anda"
+  },
+  "onboardingMessage": {
+    "message": "Halo, *Saya sangat bersemangat untuk menggunakan WAMessager dan meningkatkan bisnis saya*, berbeda dengan ekstensi lainnya, WAMessager menawarkan fitur terbaik, dukungan pelanggan yang cepat, dan harga paling terjangkau.\nDengan WAMessager, saya dapat:\nMengirim Pesan Personalisasi\nMengirim Tautan yang Dapat Diklik contohnya\nMengirim hingga 7 lampiran dengan keterangan\nTerhubung dengan kontak saya dengan mudah\nMendapatkan dukungan cepat 24 X 7 di sini\nhttps://youtu.be/cmLN2uqmMm8"
+  },
+  "onboardingSendIntro": {
+    "message": "Klik di sini untuk memulai dan mengirim bisnis Anda secara otomatis"
+  },
+  "onboardingSendText": {
+    "message": "Mulai Sekarang"
+  },
+  "syncMsgText": {
+    "message": "Aktifkan Sinkronisasi untuk Menggunakan WAMessager"
+  },
+  "syncMessageNote": {
+    "message": "(Kami memerlukan ini untuk melayani Anda dengan lebih baik)"
+  },
+  "uncheck_attachment": {
+    "message": "Hapus centang pada lampiran"
+  },
+  "imageAttmntText": {
+    "message": "Gambar/Video"
+  },
+  "docAttmntText": {
+    "message": "Dokumen"
+  },
+  "contactAttmntText": {
+    "message": "Kontak"
+  },
+  "timeGapText": {
+    "message": "Kirim setiap pesan dengan jeda waktu"
+  },
+  "timeGapSeconds": {
+    "message": "detik."
+  },
+  "timeGapRandomText": {
+    "message": "Kirim setiap pesan dengan jeda waktu acak"
+  },
+  "msgSentDisplayText": {
+    "message": "pesan dicoba"
+  },
+  "adminNumber": {
+    "message": "Admin Tim Anda:<br>+$adminNumber$",
+    "placeholders": {
+      "adminNumber": {
+        "content": "$1"
+      }
+    }
+  },
+  "addTeamMemberNote": {
+    "message": "Tambahkan anggota tim Anda agar mereka juga dapat menggunakan WAMessager Premium"
+  },
+  "addMemberAddBtnText": {
+    "message": "Tambahkan"
+  },
+  "removeTeamMemberButton": {
+    "message": "Hapus"
+  },
+  "addTeamMemberPlaceholder": {
+    "message": "Nama Anggota Tim"
+  },
+  "addTeamMemberPhonePlaceholder": {
+    "message": "Nomor Telepon Tim (Tambahkan kode negara tanpa tanda + atau ()) contoh: 918297386514"
+  },
+  "iziToastExcelSizeError": {
+    "message": "Kesalahan"
+  },
+  "iziToastExcelSizeErrorMsg": {
+    "message": "Silakan unggah file yang lebih kecil dari 5MB"
+  },
+  "iziToastMsgLimitWarning": {
+    "message": "Peringatan!"
+  },
+  "iziToastMsgLimitWarningMsg": {
+    "message": "Jangan mengirimkan lebih dari $msgLimit$ pesan pada hari pertama. Apakah Anda yakin ingin melanjutkan?",
+    "placeholders": {
+      "msgLimit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgLeftMsg": {
+    "message": "Anda memiliki $msgLimit$ pesan tersisa dalam paket saat ini. Silakan tambahkan hingga $msgLimit$ kontak",
+    "placeholders": {
+      "msgLimit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgFinishedMsg": {
+    "message": "Terima kasih telah menggunakan WAMessager, tetapi sepertinya $msg_limit$ pesan GRATIS Anda sudah habis. Silakan upgrade untuk melanjutkan menggunakan WAMessager.",
+    "placeholders": {
+      "msg_limit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgQuotaExceedMsg": {
+    "message": "Kuota anggota telah melebihi batas"
+  },
+  "iziToastMemberAlreadyPresentWarning": {
+    "message": "Anggota sudah ada"
+  },
+  "iziToastMemberAlreadyPresentWarningMsg": {
+    "message": "Anggota hanya dapat ditambahkan satu kali"
+  },
+  "iziToastAddNamePhoneWarning": {
+    "message": "Tambahkan Nama dan Nomor Telepon"
+  },
+  "iziToastAddNamePhoneWarningMsg": {
+    "message": "Nama dan Nomor Telepon tidak boleh kosong"
+  },
+  "iziToastMemberAddedSuccess": {
+    "message": "Ditambahkan"
+  },
+  "iziToastMemberAddedSuccessMsg": {
+    "message": "Anggota berhasil ditambahkan"
+  },
+  "iziToastUpgradeInfo": {
+    "message": "Upgrade ke Premium Sekarang!"
+  },
+  "iziToastUpgradeInfoMsg": {
+    "message": "Terima kasih telah menggunakan WAMessager, Anda dapat mengirim hingga $msg_limit$ pesan per hari dalam Paket Gratis, untuk mengirim lebih banyak, silakan tingkatkan paket Anda.<br>Hubungi kami di WhatsApp $supportNumber$ untuk mendapatkan Kode Kupon Diskon 5% ",
+    "placeholders": {
+      "msg_limit": {
+        "content": "$1"
+      },
+      "supportNumber": {
+        "content": "$2"
+      }
+    }
+  },
+  "extMessageCountDailyCount": {
+    "message": "Sisa pesan harian: "
+  },
+  "dailyMsgReset": {
+    "message": "Reset dalam: "
+  },
+  "EnhancementSettings": {
+    "message": "Opsi Privacy Blur"
+  },
+  "blurToggleAllText": {
+    "message": "Pilih Semua"
+  },
+  "blurToggleAllTextTitle": {
+    "message": "Pilih/Batal Pilih semua opsi Blur"
+  },
+  "blurAllMessageToggleText": {
+    "message": "Semua pesan dalam chat"
+  },
+  "blurAllMessageToggleTextTitle": {
+    "message": "Membuat blur pada semua pesan dalam chat."
+  },
+  "blurLastMesssageToggleText": {
+    "message": "Pratinjau pesan terakhir"
+  },
+  "blurLastMesssageToggleTextTitle": {
+    "message": "Membuat blur pada semua pratinjau pesan di sebelah kiri."
+  },
+  "blurMediaPreviewToggleText": {
+    "message": "Pratinjau media"
+  },
+  "blurMediaPreviewToggleTextTitle": {
+    "message": "Membuat blur pada semua gambar, video, stiker, ... yang dipisahkan dari teks."
+  },
+  "blurMediaGallaryToggleText": {
+    "message": "Galeri media"
+  },
+  "blurMediaGallaryToggleTextTitle": {
+    "message": "Membuat blur pada semua ikon pratinjau kecil dari gambar, video, ... saat melihat gambar, video, ..."
+  },
+  "blurTextInputToggleText": {
+    "message": "Input teks"
+  },
+  "blurTextInputToggleTextTitle": {
+    "message": "Mengubah warna di kolom masukan menjadi lebih terang agar sulit dibaca."
+  },
+  "blurProfilePictureToggleText": {
+    "message": "Foto profil"
+  },
+  "blurProfilePictureToggleTextTitle": {
+    "message": "Membuat blur pada semua foto profil."
+  },
+  "blurGroupUserNameToggleText": {
+    "message": "Nama grup/pengguna"
+  },
+  "blurGroupUserNameToggleTextTitle": {
+    "message": "Membuat blur pada semua nama grup dan pengguna."
+  },
+  "noTransitionDelayToggleText": {
+    "message": "Tanpa jeda transisi"
+  },
+  "noTransitionDelayToggleTextTitle": {
+    "message": "Memungkinkan Anda untuk mematikan jeda sebelum mengungkapkan elemen saat hover."
+  },
+  "unblurAllToggleText": {
+    "message": "Batalkan blur pada semuanya saat hover app"
+  },
+  "unblurAllToggleTextTitle": {
+    "message": "Membatalkan blur pada semuanya saat Anda mengarahkan kursor pada WhatsApp Web app."
+  },
+  "iziToastReviewTitle": {
+    "message": "Beri Kami Ulasan! Ini akan sangat membantu kami mencapai lebih banyak orang 😃🙏"
+  },
+  "iziToastReviewMessage": {
+    "message": "<br>Ini adalah ekstensi yang terjangkau yang dikembangkan oleh Tim WAMessager untuk membantu bisnis mengirim pesan WhatsApp kepada pelanggan mereka, sehingga Anda tidak perlu membeli ekstensi mahal lainnya. Tolong dukung kami dengan memberi rating di Chrome Store."
+  },
+  "iziToastReviewMessageOffer": {
+    "message": "<br><br><b>Tawaran: Perpanjang masa uji coba Anda selama 1 minggu dengan memberi ulasan pada kami, kirim tangkapan layar melalui WhatsApp untuk menggunakan tawaran ini.</b><br>Catatan: Berlaku 1 kali per nomor"
+  },
+  "reviewFooter": {
+    "message": "Beri ulasan pada kami"
+  },
+  "Enhancement": {
+    "message": "Privasi"
+  },
+
+  "templateModifyTitle": {
+    "message": "Templat"
+  },
+  "templateAddedMessage": {
+    "message": "Berhasil Ditambahkan"
+  },
+  "templateRemoveMessage": {
+    "message": "Berhasil Dihapus"
+  },
+  "attachmentAddButton": {
+    "message": "Tambahkan Lampiran"
+  },
+  "attachmentFileName": {
+    "message": "Nama File"
+  },
+  "attachmentFileType": {
+    "message": "Jenis File"
+  },
+  "attachmentFileCaption": {
+    "message": "Caption"
+  },
+  "attachmentFileAction": {
+    "message": "Aksi"
+  },
+  "attachmentEditAction": {
+    "message": "Edit/Tampilan"
+  },
+  "attachmentDeleteAction": {
+    "message": "Hapus"
+  },
+  "attachmentNote": {
+    "message": "Catatan: Anda dapat menambahkan hingga 7 file, caption hanya diperbolehkan pada gambar dan video"
+  },
+  "file_input_help": {
+    "message": "Batas Ukuran: 16MB, Pilih 1 File setiap saat"
+  },
+  "attachment_modal_file_name_text": {
+    "message": "Nama File"
+  },
+  "attachment_modal_file_type_text": {
+    "message": "Jenis File"
+  },
+  "attachment_caption": {
+    "message": "Caption (Opsional)"
+  },
+  "attachment_modal_file_caption_placeholder": {
+    "message": "Tulis caption Anda di sini..."
+  },
+  "attachment_modal_submit": {
+    "message": "Kirim"
+  },
+  "attachmentModalTitle_edit": {
+    "message": "Edit Caption"
+  },
+  "attachmentModalTitle_add": {
+    "message": "Tambahkan Lampiran"
+  },
+  "fileSizeAlert": {
+    "message": "Ukuran $fileName$ terlalu besar, [ ukuran file: $fileSize$ MB]. \nUkuran maksimum yang diizinkan: 16MB",
+    "placeholders": {
+      "fileName": {
+        "content": "$1"
+      },
+      "fileSize": {
+        "content": "$2"
+      }
+    }
+  },
+  "fileDuplicateAlert": {
+    "message": "File $fileName$ sudah dipilih. Harap pilih file lain",
+    "placeholders": {
+      "fileName": {
+        "content": "$1"
+      }
+    }
+  },
+  "fileEmptyAlert": {
+    "message": "Pilih file terlebih dahulu untuk mengirimkan lampiran"
+  },
+  "addTimeStamp_optionText": {
+    "message": "Tambahkan Cap Waktu <b>(Penting jangan hilangkan centang: ini akan mengurangi kemungkinan terkena pemblokiran)</b>"
+  }
+}

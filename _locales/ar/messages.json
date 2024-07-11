@@ -1,0 +1,532 @@
+{
+  "extName": {
+    "message": "Emoji Meanings in WhatsApp"
+  },
+  "extDescription": {
+    "message": "Premium WA Bulk Message Sender - Send Whatsapp Messages, Attachments, Personalized Message | Software | Marketing | WAMessager"
+  },
+  "extTitle": {
+    "message": "WA Bulk Message Sender - WAMessager"
+  },
+  "extMessageCount": {
+    "message": "عدد الرسائل المرسلة: "
+  },
+  "tabHome": {
+    "message": "الرئيسية"
+  },
+  "tabTeam": {
+    "message": "الفريق"
+  },
+  "tabPremium": {
+    "message": "شراء الباقة المميزة"
+  },
+  "tabTutorials": {
+    "message": "الدروس التعليمية"
+  },
+  "uploadExcelBtn": {
+    "message": "تحميل ملف إكسل"
+  },
+  "downloadTemplateBtn": {
+    "message": "نموذج إكسل"
+  },
+  "contactFoundText": {
+    "message": "تم العثور على $cf$ جهة اتصال",
+    "placeholders": {
+      "cf": {
+        "content": "$1"
+      }
+    }
+  },
+  "filterBtn": {
+    "message": "تصفية الأرقام"
+  },
+  "downloadGroupBtn": {
+    "message": "تنزيل المجموعة"
+  },
+  "options_divText": {
+    "message": "عمود الأرقام"
+  },
+  "numberPlaceholder": {
+    "message": "أضف الأرقام مع رمز الدولة مفصولة بفواصل والزرار Enter، مثل 91933333333"
+  },
+  "numberPlaceholderDisabled": {
+    "message": "يرجى حذف ملف إكسل أولاً لإدخال الأرقام يدويًا"
+  },
+  "sortedNumberFilterText": {
+    "message": "تم تصفية الجهات الاتصالية"
+  },
+  "downloadGroupHeadingText": {
+    "message": "تحميل جهات الاتصال الخاصة بالمجموعات / العلامات / الدردشات"
+  },
+  "exportGroupText": {
+    "message": "تصدير جهات الاتصال من:"
+  },
+  "exportGroupPlaceholder": {
+    "message": "اختر المجموعة/المجموعات للتصدير"
+  },
+  "exportLabelPlaceholder": {
+    "message": "اختر العلامة/العلامات للتصدير"
+  },
+  "exportGroup": {
+    "message": "تصدير الآن"
+  },
+  "selectAllGroupsText": {
+    "message": "اختر الكل"
+  },
+  "msg_preview_text": {
+    "message": "رسالة تجريبية"
+  },
+  "sheet_select_text": {
+    "message": "اختر ورقة"
+  },
+  "excel_from_text": {
+    "message": "الصف من"
+  },
+  "excel_to_text": {
+    "message": "الصف إلى"
+  },
+  "for_formatting_text": {
+    "message": "للتنسيق"
+  },
+  "exportFromListText": {
+    "message": "تصدير جهات الاتصال من قائمة الدردشات:"
+  },
+  "exportList": {
+    "message": "تصدير القائمة"
+  },
+  "allChatsText": {
+    "message": "تصدير جميع معلومات جهات الاتصال من قائمة الدردشات"
+  },
+  "unsavedChatsText": {
+    "message": "تصدير معلومات جهات الاتصال غير المحفوظة من قائمة الدردشات"
+  },
+  "downloadGroupCloseBtnText": {
+    "message": "إغلاق"
+  },
+  "clear": {
+    "message": "مسح"
+  },
+  "messageSettingsText": {
+    "message": "إعدادات الرسالة"
+  },
+  "send_attachmentsText": {
+    "message": "إرسال المرفقات"
+  },
+  "unsubscribe_optionText": {
+    "message": "إضافة خيار الإلغاء"
+  },
+  "custom_divText": {
+    "message": "إرسالرسالة شخصية"
+  },
+  "timerCheckboxText": {
+    "message": "فترة زمنية بين كل رسالة"
+  },
+  "msgLineText": {
+    "message": "اكتب رسالتك هنا"
+  },
+  "msgOverflowText": {
+    "message": "لا ترسل أكثر من 50 رسالة في اليوم الأول"
+  },
+  "errortext": {
+    "message": "يجب ألا يكون نص الرسالة فارغًا"
+  },
+  "addTemplateText": {
+    "message": "إضافة قالب"
+  },
+  "planInfoText": {
+    "message": "الباقة: "
+  },
+  "supportFooter": {
+    "message": "اتصل بفريق الدعم"
+  },
+  "pauseBtnText": {
+    "message": "إيقاف مؤقت"
+  },
+  "continueBtnText": {
+    "message": "متابعة"
+  },
+  "stopBtnText": {
+    "message": "إيقاف"
+  },
+  "sendBtnText": {
+    "message": "إرسال"
+  },
+  "reportBtnText": {
+    "message": "تقرير"
+  },
+
+  "addMemberHeadingText": {
+    "message": "إضافة أعضاء للفريق"
+  },
+  "addMemberBtnText": {
+    "message": "إضافة عضو"
+  },
+  "memberCount": {
+    "message": "تم استخدام $addedMemberCount$/$allowedMemberCount$ من الأعضاء",
+    "placeholders": {
+      "addedMemberCount": {
+        "content": "$1"
+      },
+      "allowedMemberCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "teamMemberNameText": {
+    "message": "اسم العضو في الفريق"
+  },
+  "teamMemberPhoneNumberText": {
+    "message": "رقم واتساب الخاص بالعضو"
+  },
+  "RemoveMemberText": {
+    "message": "إزالة العضو"
+  },
+  "getPremiumHeading": {
+    "message": "هذه هي المزايا التي يمكنك الاستمتاع بها"
+  },
+  "getPremium1": {
+    "message": "إرسال رسائل واتساب غير محدودة لعملائك."
+  },
+  "getPremium2": {
+    "message": "تنزيل جهات اتصال مجموعات واتساب غير محدودة في ملف إكسل."
+  },
+  "getPremium3": {
+    "message": "إرسال رسائل شخصية لعملائك عن طريق تحميل ملف إكسل وتحديد التخصيص على WAMessenger."
+  },
+  "getPremium4": {
+    "message": "توفير خيار الإلغاء لعملائك ، حتى لا يبلغوا عنك كرسائل غير مرغوب بها ويمنعوا رقمك من الحظر من قبل واتساب"
+  },
+  "getPremium5": {
+    "message": "إرسال مرفقات الصور والفيديو والصوت والملفات."
+  },
+  "getPremium6": {
+    "message": "تعيين فترة زمنية بين كل رسالة لتقليل فرص الحظر."
+  },
+  "getPremium7": {
+    "message": "تنزيل تقارير التسليم لتحليلات أفضل لحملات WhatsApp الخاصة بك."
+  },
+  "getPremium8": {
+    "message": "دعم العملاء المميز على واتساب والبريد الإلكتروني و Google Meet."
+  },
+  "premmium_feature": {
+    "message": "هذه ميزة مميزة"
+  },
+  "template_premmium_feature": {
+    "message": "القالب هو ميزة مميزة"
+  },
+  "noteamMember": {
+    "message": "يرجى الترقية في الباقة لإضافة أعضاء فريق جدد"
+  },
+  "messagePlaceholder": {
+    "message": "اكتب الرسالة هنا.."
+  },
+  "uploadExcelDisabledLabel": {
+    "message": "يرجى حذف الأرقام الموجودة أدناه لتحميل ملف إكسل"
+  },
+  "firstMessageText": {
+    "message": "لنبدأ بإرسال أول رسالة"
+  },
+  "firstMessageReadyText": {
+    "message": "أنت الآن جاهز لإرسال أول رسالة"
+  },
+  "onboardingMessage": {
+    "message": "مرحبًا، *أنا متحمس لاستخدام WAM وتعزيز عملي*, وعلى عكس التمديدات الأخرى، يحتوي WAM على ميزات متميزة، ودعم عملاء سريع، وأسعار معقولة جدًا.\nمع Wam يمكنني:\nإرسال رسائل شخصية\nإرسال روابط قابلة للنقر مثل \nإرسال ما يصل إلى 7 مرفقات مع تعليق\nالتواصل مع جهات الاتصال بسهولة\nالحصول على دعم سريع على مدار الساعة هنا"
+  },
+  "onboardingSendIntro": {
+    "message": "انقر هنا للبدء وإرسال عملك على الطيران التلقائي"
+  },
+  "onboardingSendText": {
+    "message": "ابدأ"
+  },
+  "syncMsgText": {
+    "message": "تمكين المزامنة لاستخدام WAMessager"
+  },
+  "syncMessageNote": {
+    "message": "(نحتاج إلى هذا لتقديم خدمة أفضل لك)"
+  },
+  "uncheck_attachment": {
+    "message": "إلغاء تحديد المرفق"
+  },
+  "imageAttmntText": {
+    "message": "صورة / فيديو"
+  },
+  "docAttmntText": {
+    "message": "مستند"
+  },
+  "contactAttmntText": {
+    "message": "جهة اتصال"
+  },
+  "timeGapText": {
+    "message": "إرسال كل رسالة بفاصل زمني يبلغ"
+  },
+  "timeGapSeconds": {
+    "message": "ثانية."
+  },
+  "timeGapRandomText": {
+    "message": "إرسال كل رسالة بفاصل زمني عشوائي"
+  },
+  "msgSentDisplayText": {
+    "message": "تمت المحاولة لإرسال الرسالة (الرسائل)"
+  },
+  "adminNumber": {
+    "message": "مسؤول الفريق الخاص بك: <br> + $adminNumber$",
+    "placeholders": {
+      "adminNumber": {
+        "content": "$1"
+      }
+    }
+  },
+  "addTeamMemberNote": {
+    "message": "أضف أعضاء فريقك حتى يمكنهم استخدام WAMessager Premium أيضًا"
+  },
+  "addMemberAddBtnText": {
+    "message": "أضف"
+  },
+  "removeTeamMemberButton": {
+    "message": "إزالة"
+  },
+  "addTeamMemberPlaceholder": {
+    "message": "اسم عضو الفريق"
+  },
+  "addTeamMemberPhonePlaceholder": {
+    "message": "رقم هاتف العضو (أضف رمز الدولة بدون أي + أو () ) مثال: 918297386514"
+  },
+  "iziToastExcelSizeError": {
+    "message": "خطأ"
+  },
+  "iziToastExcelSizeErrorMsg": {
+    "message": "يرجى تحميل ملف أقل من 5 ميجابايت"
+  },
+  "iziToastMsgLimitWarning": {
+    "message": "تحذير!"
+  },
+  "iziToastMsgLimitWarningMsg": {
+    "message": "لا ترسل أكثر من $msgLimit$ رسالة في اليوم الأول. هل أنت متأكد أنك تريد الاستمرار؟",
+    "placeholders": {
+      "msgLimit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgLeftMsg": {
+    "message": "لديك $msgLimit$ رسالة متبقية في خطتك الحالية. يرجى إضافة ما يصل إلى $msgLimit$ جهة اتصال",
+    "placeholders": {
+      "msgLimit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgFinishedMsg": {
+    "message": "شكرًا لاستخدام WAMessager ، ولكن يبدو أن رسائلك المجانية ال $msg_limit$ قد انتهت. يرجى الترقية للاستمرار في استخدام WAMessager.",
+    "placeholders": {
+      "msg_limit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgQuotaExceedMsg": {
+    "message": "تم تجاوز حصة الأعضاء"
+  },
+  "iziToastMemberAlreadyPresentWarning": {
+    "message": "العضو موجود بالفعل"
+  },
+  "iziToastMemberAlreadyPresentWarningMsg": {
+    "message": "يمكن إضافة العضو مرة واحدة فقط"
+  },
+  "iziToastAddNamePhoneWarning": {
+    "message": "أضف الاسم والهاتف"
+  },
+  "iziToastAddNamePhoneWarningMsg": {
+    "message": "لا يمكن أن يكون اسم العضو ورقم الهاتف فارغين"
+  },
+  "iziToastMemberAddedSuccess": {
+    "message": "تمت الإضافة"
+  },
+  "iziToastMemberAddedSuccessMsg": {
+    "message": "تمت إضافة العضو بنجاح"
+  },
+  "iziToastUpgradeInfo": {
+    "message": "الترقية إلى Premium الآن!"
+  },
+  "iziToastUpgradeInfoMsg": {
+    "message": "شكرًا لاستخدامك تطبيق واتس مسنجر. يمكنك إرسال حتى $msg_limit$ رسالة في اليوم في خطة مجانية. لإرسال المزيد، يرجى الترقية إلى خطة أخرى.<br>يمكنك التواصل معنا على واتساب على الرقم $supportNumber$ للحصول على كود خصم بنسبة 5%.",
+    "placeholders": {
+      "msg_limit": {
+        "content": "$1"
+      },
+      "supportNumber": {
+        "content": "$2"
+      }
+    }
+  },
+  "extMessageCountDailyCount": {
+    "message": "الرسائل المتبقية اليوم: "
+  },
+  "dailyMsgReset": {
+    "message": "سيتم إعادة التعيين في: "
+  },
+  "EnhancementSettings": {
+    "message": "خيارات التعتيم للخصوصية"
+  },
+  "blurToggleAllText": {
+    "message": "تحديد الكل"
+  },
+  "blurToggleAllTextTitle": {
+    "message": "تحديد/إلغاء تحديد جميع خيارات التعتيم"
+  },
+  "blurAllMessageToggleText": {
+    "message": "جميع الرسائل في الدردشة"
+  },
+
+  "blurAllMessageToggleTextTitle": {
+    "message": "يعتم جميع الرسائل في الدردشة."
+  },
+  "blurLastMesssageToggleText": {
+    "message": "معاينة آخر الرسائل"
+  },
+  "blurLastMesssageToggleTextTitle": {
+    "message": "يعتم جميع معاينات الرسائل الموجودة على اليسار."
+  },
+  "blurMediaPreviewToggleText": {
+    "message": "معاينة الوسائط"
+  },
+
+  "blurMediaPreviewToggleTextTitle": {
+    "message": "يعتم جميع الصور ومقاطع الفيديو والملصقات ... بشكل منفصل عن النص."
+  },
+  "blurMediaGallaryToggleText": {
+    "message": "معرض الوسائط"
+  },
+  "blurMediaGallaryToggleTextTitle": {
+    "message": "يعتم جميع الرموز المصغرة الصغيرة للصور ومقاطع الفيديو ... أثناء عرض صورة أو فيديو ..."
+  },
+  "blurTextInputToggleText": {
+    "message": "إدخال النص"
+  },
+  "blurTextInputToggleTextTitle": {
+    "message": "يجعل لون حقل الإدخال الخاص بك أخف لجعله من الصعب القراءة."
+  },
+  "blurProfilePictureToggleText": {
+    "message": "صور الملف الشخصي"
+  },
+  "blurProfilePictureToggleTextTitle": {
+    "message": "يعتم جميع صور الملف الشخصي."
+  },
+  "blurGroupUserNameToggleText": {
+    "message": "أسماء المجموعات/المستخدمين"
+  },
+
+  "blurGroupUserNameToggleTextTitle": {
+    "message": "يعتم جميع أسماء المجموعات والمستخدمين."
+  },
+  "noTransitionDelayToggleText": {
+    "message": "لا تأخير في الانتقال"
+  },
+  "noTransitionDelayToggleTextTitle": {
+    "message": "يتيح لك إيقاف التأخير قبل الكشف عن عنصر عندما تمرر المؤشر فوقه."
+  },
+  "unblurAllToggleText": {
+    "message": "إلغاء تعتيم الكل عند تحويم المؤشر فوق التطبيق"
+  },
+  "unblurAllToggleTextTitle": {
+    "message": "يعيد ظهور جميع العناصر المعتمة عند تحويم المؤشر فوق تطبيق واتساب ويب."
+  },
+  "iziToastReviewTitle": {
+    "message": "قيمنا! سيساعدنا ذلك حقًا على الوصول إلى المزيد من الناس 😃🙏"
+  },
+  "iziToastReviewMessage": {
+    "message": "<br>هذه هي إضافة ميسورة التكلفة تم تطويرها بواسطة فريق واتس اب للمساعدة في إرسال رسائل واتس اب للعملاءاتهم، بحيث لا يتعين عليك شراء إضافات باهظة الثمن. يرجى دعمنا عن طريق تقييمنا على متجر كروم."
+  },
+  "iziToastReviewMessageOffer": {
+    "message": "<br><br><b>عرض: يمكنك تمديد فترة المحاكاة لمدة أسبوع واحد عند تقييمنا، يرجى إرسال صورة للتقييم عبر واتساب للحصول على العرض.</b><br>ملاحظة: صالح 1 مرة لكل رقم"
+  },
+  "reviewFooter": {
+    "message": "قيمونا"
+  },
+  "Enhancement": {
+    "message": "الخصوصية"
+  },
+
+  "templateModifyTitle": {
+    "message": "النموذج"
+  },
+  "templateAddedMessage": {
+    "message": "تمت الإضافة بنجاح"
+  },
+  "templateRemoveMessage": {
+    "message": "تم الحذف بنجاح"
+  },
+  "attachmentAddButton": {
+    "message": "إضافة مرفق"
+  },
+  "attachmentFileName": {
+    "message": "اسم الملف"
+  },
+  "attachmentFileType": {
+    "message": "نوع الملف"
+  },
+  "attachmentFileCaption": {
+    "message": "التعليق"
+  },
+  "attachmentFileAction": {
+    "message": "الإجراء(ات)"
+  },
+  "attachmentEditAction": {
+    "message": "تعديل/عرض"
+  },
+  "attachmentDeleteAction": {
+    "message": "حذف"
+  },
+  "attachmentNote": {
+    "message": "ملاحظة: يمكنك إضافة حتى 7 ملفات، ويسمح التعليق فقط في الصور ومقاطع الفيديو"
+  },
+  "file_input_help": {
+    "message": "الحد الأقصى للحجم: 16 ميجابايت، اختر ملف واحد في كل مرة"
+  },
+  "attachment_modal_file_name_text": {
+    "message": "اسم الملف"
+  },
+  "attachment_modal_file_type_text": {
+    "message": "نوع الملف"
+  },
+  "attachment_caption": {
+    "message": "التعليق (اختياري)"
+  },
+  "attachment_modal_file_caption_placeholder": {
+    "message": "اكتب التعليق الخاص بك هنا..."
+  },
+  "attachment_modal_submit": {
+    "message": "إرسال"
+  },
+  "attachmentModalTitle_edit": {
+    "message": "تعديل التعليق"
+  },
+  "attachmentModalTitle_add": {
+    "message": "إضافة مرفق"
+  },
+  "fileSizeAlert": {
+    "message": "حجم $fileName$ كبير جدًا، [ حجم الملف: $fileSize$ ميجابايت]. \nالحجم الأقصى المسموح به: 16 ميجابايت",
+    "placeholders": {
+      "fileName": {
+        "content": "$1"
+      },
+      "fileSize": {
+        "content": "$2"
+      }
+    }
+  },
+  "fileDuplicateAlert": {
+    "message": "الملف $fileName$ تم اختياره بالفعل. يرجى اختيار ملف مختلف",
+    "placeholders": {
+      "fileName": {
+        "content": "$1"
+      }
+    }
+  },
+  "fileEmptyAlert": {
+    "message": "يرجى اختيار ملف أولاً لإضافة مرفق"
+  },
+  "addTimeStamp_optionText": {
+    "message": "إضافة الطابع الزمني <b>(مهم: لا تقم بإلغاء الاختيار - فهذا سيقلل من فرص الحظر)</b>"
+  }
+}

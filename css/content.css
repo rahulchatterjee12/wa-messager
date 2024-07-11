@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap");
+
+.modal {
+  font-family: "PT Sans Caption", sans-serif !important;
+  display: block;
+  position: fixed;
+  z-index: 100;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.CtaBtn:hover {
+  filter: brightness(1.2);
+}
+
+.CtaBtn:active {
+  filter: brightness(0.8);
+}
+
+.CtaCloseBtn {
+  border-radius: 50%;
+  padding: 0px 3px;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  margin: -10px;
+  cursor: pointer;
+  filter: invert(0.9);
+}
+
+.CtaCloseBtn:hover {
+  filter: invert(0.5);
+}
+
+.CtaCloseBtn:active {
+  filter: invert(0);
+}
+
+.CtaDeleteBtn:hover {
+  background: red;
+  color: white !important;
+}
+
+footer._3E8Fg {
+  background-color: var(--rich-text-panel-background) !important;
+}

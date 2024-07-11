@@ -1,0 +1,531 @@
+{
+  "extName": {
+    "message": "Whats Free Sender - WAMessager"
+  },
+  "extDescription": {
+    "message": "Premium WA Bulk Message Sender - Send Whatsapp Messages, Attachments, Personalized Message | Software | Marketing | WAMessager"
+  },
+  "extTitle": {
+    "message": "WA Bulk Message Sender - WAMessager"
+  },
+  "extMessageCount": {
+    "message": "Mensagens Enviadas: "
+  },
+  "tabHome": {
+    "message": "Início"
+  },
+  "tabTeam": {
+    "message": "Equipe"
+  },
+  "tabPremium": {
+    "message": "Compre Premium"
+  },
+  "tabTutorials": {
+    "message": "Tutorial"
+  },
+  "uploadExcelBtn": {
+    "message": "Enviar Excel"
+  },
+  "downloadTemplateBtn": {
+    "message": "Modelo Excel"
+  },
+  "contactFoundText": {
+    "message": "$cf$ contato(s) encontrado(s)",
+    "placeholders": {
+      "cf": {
+        "content": "$1"
+      }
+    }
+  },
+  "filterBtn": {
+    "message": "Filtrar Números"
+  },
+  "downloadGroupBtn": {
+    "message": "Baixar Grupo"
+  },
+  "options_divText": {
+    "message": "Coluna de Números"
+  },
+  "numberPlaceholder": {
+    "message": "Adicione Números com o código do país, Ex.: 55 11 999999999 separados por vírgulas + Enter"
+  },
+  "numberPlaceholderDisabled": {
+    "message": "exclua a planilha Excel para inserir números manualmente"
+  },
+  "sortedNumberFilterText": {
+    "message": "contatos filtrados"
+  },
+  "downloadGroupHeadingText": {
+    "message": "Baixar Seus Grupos/ Etiquetas/ Contatos de Conversas"
+  },
+  "exportGroupText": {
+    "message": "Exportar Contatos de:"
+  },
+  "exportGroupPlaceholder": {
+    "message": "Selecionar Grupo(s) para Exportar"
+  },
+  "exportLabelPlaceholder": {
+    "message": "Selecionar Etiqueta(s) para Exportar"
+  },
+  "exportGroup": {
+    "message": "Exportar Agora"
+  },
+  "selectAllGroupsText": {
+    "message": "Selecionar Todos"
+  },
+  "msg_preview_text": {
+    "message": "Mensagem de Teste"
+  },
+  "sheet_select_text": {
+    "message": "Selecionar Planilha"
+  },
+  "excel_from_text": {
+    "message": "Linha de"
+  },
+  "excel_to_text": {
+    "message": "Linha até"
+  },
+  "for_formatting_text": {
+    "message": "Para formatação"
+  },
+  "exportFromListText": {
+    "message": "Exportar Contatos de Listas de Chat:"
+  },
+  "exportList": {
+    "message": "Exportar Lista"
+  },
+  "allChatsText": {
+    "message": "Exportar todas as informações de contato da lista de chat"
+  },
+  "unsavedChatsText": {
+    "message": "Exportar informações de contato não salvas da lista de chat"
+  },
+  "downloadGroupCloseBtnText": {
+    "message": "Fechar"
+  },
+  "clear": {
+    "message": "Limpar"
+  },
+  "messageSettingsText": {
+    "message": "Configurações da Mensagem"
+  },
+  "send_attachmentsText": {
+    "message": "Enviar Anexos"
+  },
+  "unsubscribe_optionText": {
+    "message": "Adicionar Opção de Cancelamento de Inscrição"
+  },
+  "custom_divText": {
+    "message": "Enviar Mensagem Personalizada"
+  },
+  "timerCheckboxText": {
+    "message": "Intervalo de Tempo"
+  },
+  "msgLineText": {
+    "message": "Digite sua mensagem aqui"
+  },
+  "msgOverflowText": {
+    "message": "Não envie mais do que 50 mensagens no primeiro dia"
+  },
+  "errortext": {
+    "message": "O texto da mensagem não deve estar vazio"
+  },
+  "addTemplateText": {
+    "message": "Adicionar Modelo"
+  },
+  "planInfoText": {
+    "message": "Plano: "
+  },
+  "supportFooter": {
+    "message": "Contato de Suporte"
+  },
+  "pauseBtnText": {
+    "message": "Pausar"
+  },
+  "continueBtnText": {
+    "message": "Continuar"
+  },
+  "stopBtnText": {
+    "message": "Parar"
+  },
+  "sendBtnText": {
+    "message": "Enviar"
+  },
+  "reportBtnText": {
+    "message": "Relatório"
+  },
+  "addMemberHeadingText": {
+    "message": "Adicionar Membros da Equipe"
+  },
+  "addMemberBtnText": {
+    "message": "Adicionar Membro"
+  },
+  "memberCount": {
+    "message": "$addedMemberCount$/$allowedMemberCount$ membros utilizados",
+    "placeholders": {
+      "addedMemberCount": {
+        "content": "$1"
+      },
+      "allowedMemberCount": {
+        "content": "$2"
+      }
+    }
+  },
+  "teamMemberNameText": {
+    "message": "Nome do Membro da Equipe"
+  },
+  "teamMemberPhoneNumberText": {
+    "message": "Número do WhatsApp"
+  },
+  "RemoveMemberText": {
+    "message": "Remover Membro"
+  },
+  "getPremiumHeading": {
+    "message": "Estes são os recursos que você pode aproveitar"
+  },
+  "getPremium1": {
+    "message": "Envie mensagens ilimitadas do WhatsApp para seus clientes."
+  },
+  "getPremium2": {
+    "message": "Baixe contatos ilimitados do WhatsApp em grupo em um arquivo Excel."
+  },
+  "getPremium3": {
+    "message": "Envie mensagens personalizadas aos seus clientes, carregando um arquivo Excel e selecionando a personalização no WAMessenger."
+  },
+  "getPremium4": {
+    "message": "Dê aos seus clientes a opção de cancelar a inscrição, para que eles não o denunciem como spam e evitem que seu número seja banido pelo WhatsApp."
+  },
+  "getPremium5": {
+    "message": "Envie anexos de imagem, vídeo, áudio e arquivos."
+  },
+  "getPremium6": {
+    "message": "Defina um intervalo de tempo entre cada mensagem para diminuir as chances de bloqueio."
+  },
+  "getPremium7": {
+    "message": "Baixe relatórios de entrega para obter melhores análises de suas campanhas do WhatsApp."
+  },
+  "getPremium8": {
+    "message": "Suporte ao cliente Premium via WhatsApp, e-mail e Google Meet."
+  },
+  "premmium_feature": {
+    "message": "Este é um recurso Premium"
+  },
+  "template_premmium_feature": {
+    "message": "Modelo é um recurso Premium"
+  },
+  "noteamMember": {
+    "message": "Atualize o plano para adicionar membros à equipe"
+  },
+  "messagePlaceholder": {
+    "message": "Digite a mensagem aqui.."
+  },
+  "uploadExcelDisabledLabel": {
+    "message": "Exclua os números abaixo para enviar a planilha Excel"
+  },
+  "firstMessageText": {
+    "message": "Vamos começar enviando sua primeira mensagem"
+  },
+  "firstMessageReadyText": {
+    "message": "Você está pronto para enviar sua primeira mensagem"
+  },
+  "onboardingMessage": {
+    "message": "Olá, *estou animado para usar o WAM e impulsionar meu negócio*, e ao contrário de outras extensões, o WAM possui recursos de primeira linha, suporte rápido ao cliente e preços mais acessíveis.\nCom o WAM, posso:\nEnviar Mensagens Personalizadas\nEnviar Links Clicáveis, por exemplo, \nEnviar até 7 anexos com legenda\nConectar-se facilmente com meus contatos\nObter suporte rápido 24 X 7 aqui"
+  },
+  "onboardingSendIntro": {
+    "message": "Clique aqui para começar e colocar seu negócio no piloto automático"
+  },
+  "onboardingSendText": {
+    "message": "Começar"
+  },
+  "syncMsgText": {
+    "message": "Ative a sincronização para usar o WAMessager"
+  },
+  "syncMessageNote": {
+    "message": "(Precisamos disso para atendê-lo melhor)"
+  },
+  "uncheck_attachment": {
+    "message": "Desmarque o anexo"
+  },
+  "imageAttmntText": {
+    "message": "Imagem/Vídeo"
+  },
+  "docAttmntText": {
+    "message": "Documento"
+  },
+  "contactAttmntText": {
+    "message": "Contato"
+  },
+  "timeGapText": {
+    "message": "Enviar cada mensagem com um intervalo de tempo de"
+  },
+  "timeGapSeconds": {
+    "message": "segundos."
+  },
+  "timeGapRandomText": {
+    "message": "Enviar cada mensagem com um intervalo de tempo aleatório"
+  },
+  "msgSentDisplayText": {
+    "message": "mensagem(s) tentadas"
+  },
+  "adminNumber": {
+    "message": "Seu Admin da Equipe:<br>+$adminNumber$",
+    "placeholders": {
+      "adminNumber": {
+        "content": "$1"
+      }
+    }
+  },
+  "addTeamMemberNote": {
+    "message": "Adicione membros à sua equipe para que eles também possam usar o WAMessager Premium"
+  },
+  "addMemberAddBtnText": {
+    "message": "Adicionar"
+  },
+  "removeTeamMemberButton": {
+    "message": "Remover"
+  },
+  "addTeamMemberPlaceholder": {
+    "message": "Nome do Membro da Equipe"
+  },
+  "addTeamMemberPhonePlaceholder": {
+    "message": "Número de telefone do membro da equipe (adicione o código do país sem nenhum + ou () ) ex: 918297386514"
+  },
+  "iziToastExcelSizeError": {
+    "message": "Erro"
+  },
+  "iziToastExcelSizeErrorMsg": {
+    "message": "Por favor, envie um ficheiro com menos de 5MB"
+  },
+  "iziToastMsgLimitWarning": {
+    "message": "Atenção!"
+  },
+  "iziToastMsgLimitWarningMsg": {
+    "message": "Não envie mais do que $msgLimit$ mensagens no primeiro dia. Tem a certeza de que deseja continuar?",
+    "placeholders": {
+      "msgLimit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgLeftMsg": {
+    "message": "Tem $msgLimit$ mensagens restantes no seu plano atual. Por favor, adicione até $msgLimit$ contatos",
+    "placeholders": {
+      "msgLimit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgFinishedMsg": {
+    "message": "Obrigado por usar o WAMessager, mas parece que as suas $msg_limit$ mensagens GRÁTIS acabaram. Por favor, faça um upgrade para continuar usando o WAMessager.",
+    "placeholders": {
+      "msg_limit": {
+        "content": "$1"
+      }
+    }
+  },
+  "iziToastErrMsgQuotaExceedMsg": {
+    "message": "Limite de membros excedido"
+  },
+  "iziToastMemberAlreadyPresentWarning": {
+    "message": "Membro já existe"
+  },
+  "iziToastMemberAlreadyPresentWarningMsg": {
+    "message": "O membro só pode ser adicionado uma vez"
+  },
+  "iziToastAddNamePhoneWarning": {
+    "message": "Adicione o nome e o telefone"
+  },
+  "iziToastAddNamePhoneWarningMsg": {
+    "message": "O nome e número de telefone não podem estar vazios"
+  },
+  "iziToastMemberAddedSuccess": {
+    "message": "Adicionado"
+  },
+  "iziToastMemberAddedSuccessMsg": {
+    "message": "Membro adicionado com sucesso"
+  },
+  "iziToastUpgradeInfo": {
+    "message": "Faça um upgrade para o Premium agora!"
+  },
+  "iziToastUpgradeInfoMsg": {
+    "message": "Obrigado por usar o WAMessager, você pode enviar até $msg_limit$ mensagens por dia no Plano Gratuito, para enviar mais, por favor, faça upgrade do seu plano.<br>Fale conosco no WhatsApp $supportNumber$ para obter um cupom de desconto de 5% ",
+    "placeholders": {
+      "msg_limit": {
+        "content": "$1"
+      },
+      "supportNumber": {
+        "content": "$2"
+      }
+    }
+  },
+  "extMessageCountDailyCount": {
+    "message": "Mensagens diárias restantes: "
+  },
+  "dailyMsgReset": {
+    "message": "Reiniciar em: "
+  },
+  "EnhancementSettings": {
+    "message": "Opções de desfoque de privacidade"
+  },
+  "blurToggleAllText": {
+    "message": "Selecionar Todos"
+  },
+  "blurToggleAllTextTitle": {
+    "message": "Selecionar/Deselecionar todas as opções de desfoque"
+  },
+  "blurAllMessageToggleText": {
+    "message": "Todas as mensagens na conversa"
+  },
+
+  "blurAllMessageToggleTextTitle": {
+    "message": "Desfoca todas as mensagens na conversa."
+  },
+  "blurLastMesssageToggleText": {
+    "message": "Pré-visualização das últimas mensagens"
+  },
+  "blurLastMesssageToggleTextTitle": {
+    "message": "Desfoca todas as pré-visualizações de mensagens à esquerda."
+  },
+  "blurMediaPreviewToggleText": {
+    "message": "Pré-visualização de mídia"
+  },
+
+  "blurMediaPreviewToggleTextTitle": {
+    "message": "Desfoca todas as imagens, vídeos, autocolantes, ... separadamente do texto."
+  },
+  "blurMediaGallaryToggleText": {
+    "message": "Galeria de mídia"
+  },
+  "blurMediaGallaryToggleTextTitle": {
+    "message": "Desfoca todos os pequenos ícones de pré-visualização de imagens, vídeos, ... enquanto visualiza uma imagem, vídeo, ..."
+  },
+  "blurTextInputToggleText": {
+    "message": "Entrada de texto"
+  },
+  "blurTextInputToggleTextTitle": {
+    "message": "Torna a cor no seu campo de entrada mais clara para torná-lo mais difícil de ler."
+  },
+  "blurProfilePictureToggleText": {
+    "message": "Fotos de perfil"
+  },
+  "blurProfilePictureToggleTextTitle": {
+    "message": "Desfoca todas as fotos de perfil."
+  },
+  "blurGroupUserNameToggleText": {
+    "message": "Nomes de grupo/usuarios"
+  },
+
+  "blurGroupUserNameToggleTextTitle": {
+    "message": "Desfoca todos os nomes de grupo e de usuários."
+  },
+  "noTransitionDelayToggleText": {
+    "message": "Sem atraso de transição"
+  },
+  "noTransitionDelayToggleTextTitle": {
+    "message": "Permite desligar o atraso antes de revelar um item no hover."
+  },
+  "unblurAllToggleText": {
+    "message": "Desfazer desfoque em tudo ao passar o mouse no app"
+  },
+  "unblurAllToggleTextTitle": {
+    "message": "Desfaz o desfoque em tudo quando você passa o mouse sobre o aplicativo WhatsApp Web."
+  },
+  "iziToastReviewTitle": {
+    "message": "Avalie-nos! Isso realmente nos ajudará a alcançar mais pessoas 😃🙏"
+  },
+  "iziToastReviewMessage": {
+    "message": "<br>Esta é uma extensão acessível desenvolvida pela equipe WAMessager para ajudar empresas a enviar mensagens do WhatsApp para seus clientes, para que você não precise comprar outras extensões caras. Por favor, mostre seu apoio avaliando-nos na Chrome Store."
+  },
+  "iziToastReviewMessageOffer": {
+    "message": "<br><br><b>Oferta: Estenda seu teste em 1 semana avaliando-nos, envie um screenshot pelo WhatsApp para aproveitar a oferta.</b><br>Nota: Válido 1 vez por número"
+  },
+  "reviewFooter": {
+    "message": "Avalie-nos"
+  },
+  "Enhancement": {
+    "message": "Privacidade"
+  },
+
+  "templateModifyTitle": {
+    "message": "Modelo"
+  },
+  "templateAddedMessage": {
+    "message": "Adicionado com sucesso"
+  },
+  "templateRemoveMessage": {
+    "message": "Excluído com sucesso"
+  },
+  "attachmentAddButton": {
+    "message": "Adicionar Anexo"
+  },
+  "attachmentFileName": {
+    "message": "Nome do arquivo"
+  },
+  "attachmentFileType": {
+    "message": "Tipo de arquivo"
+  },
+  "attachmentFileCaption": {
+    "message": "Legenda"
+  },
+  "attachmentFileAction": {
+    "message": "Ação(ões)"
+  },
+  "attachmentEditAction": {
+    "message": "Editar/Visualizar"
+  },
+  "attachmentDeleteAction": {
+    "message": "Excluir"
+  },
+  "attachmentNote": {
+    "message": "Observação: Você pode adicionar até 7 arquivos, legenda permitida somente em imagens e vídeos."
+  },
+  "file_input_help": {
+    "message": "Limite de tamanho: 16 MB, selecione 1 arquivo por vez"
+  },
+  "attachment_modal_file_name_text": {
+    "message": "Nome do arquivo"
+  },
+  "attachment_modal_file_type_text": {
+    "message": "Tipo de arquivo"
+  },
+  "attachment_caption": {
+    "message": "Legenda (opcional)"
+  },
+  "attachment_modal_file_caption_placeholder": {
+    "message": "Escreva sua legenda aqui..."
+  },
+  "attachment_modal_submit": {
+    "message": "Enviar"
+  },
+  "attachmentModalTitle_edit": {
+    "message": "Editar Legenda"
+  },
+  "attachmentModalTitle_add": {
+    "message": "Adicionar Anexo"
+  },
+  "fileSizeAlert": {
+    "message": "O tamanho do arquivo '$fileName$' é muito grande, [ tamanho do arquivo: $fileSize$ MB]. \nTamanho máximo permitido: 16 MB.",
+    "placeholders": {
+      "fileName": {
+        "content": "$1"
+      },
+      "fileSize": {
+        "content": "$2"
+      }
+    }
+  },
+  "fileDuplicateAlert": {
+    "message": "O arquivo '$fileName$' já foi selecionado. Por favor, escolha um arquivo diferente",
+    "placeholders": {
+      "fileName": {
+        "content": "$1"
+      }
+    }
+  },
+  "fileEmptyAlert": {
+    "message": "Escolha primeiro um arquivo para enviar o anexo"
+  },
+  "addTimeStamp_optionText": {
+    "message": "Adicionar Carimbo de Data e Hora <b>(Importante: não desmarque, isso reduzirá as chances de ser bloqueado)</b>"
+  }
+}

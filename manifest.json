@@ -1,0 +1,68 @@
+{
+  "manifest_version": 3,
+
+  "name": "__WA__Message__",
+  "version": "7.0.20",
+  "description": "__WA__Message__Description__",
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "js": [
+        "js/xlsx.full.min.js",
+        "js/libphonenumber.max.js",
+        "content.js",
+        "js/jquery.js",
+        "js/load.js"
+      ],
+      "matches": ["https://*.whatsapp.com/*"],
+      "css": ["css/content.css"]
+    }
+  ],
+
+  "icons": {
+    "16": "./assets/logo.png",
+    "48": "./assets/logo.png",
+    "128": "./assets/logo.png"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "pop_up.html",
+    "default_title": "__MSG_extTitle__"
+  },
+
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "identity",
+    "identity.email",
+    "tabs",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://wamessager-backend.onrender.com/",
+    "https://*.whatsapp.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/js/inject.js",
+        "/js/load.js",
+        "css/addon-css/messages.css",
+        "css/addon-css/messagesPreview.css",
+        "css/addon-css/mediaPreview.css",
+        "css/addon-css/mediaGallery.css",
+        "css/addon-css/textInput.css",
+        "css/addon-css/profilePic.css",
+        "css/addon-css/name.css",
+        "css/addon-css/noDelay.css",
+        "css/addon-css/unblurActive.css",
+        "assets/closeBtn.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
